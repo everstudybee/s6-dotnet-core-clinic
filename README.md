@@ -32,4 +32,4 @@
 
 ### DESCRIPTION
 
-Web application for operating the Clinic. It enables the registration of doctors, patients and visits. MS SQL Server database, Database First approach. 
+Web application for managing the Clinic. It enables the registration of doctors, patients and visits. MS SQL Server database, Code-First approach. 
