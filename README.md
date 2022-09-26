@@ -33,3 +33,35 @@
 ### DESCRIPTION
 
 Web application for managing the Clinic. It enables the registration of doctors, patients and visits. MS SQL Server database, Code-First approach. 
+
+### ASP.NET Core MVC web app: controller wizard issue
+
+1. [Stackoverflow](https://stackoverflow.com/questions/73833413/asp-net-core-mvc-web-app-controller-wizard-issue)
+2. [GitHub dotnet/Scaffolding](https://github.com/dotnet/Scaffolding/issues/2019)  
+3. [Youtube - .NET Identity Scaffolding Error](https://youtu.be/VFq4aeP0XWQ)
+
+Solution
+1. The solution is in the last link
+1. Copy the model from `Clinic.Database`. Entire `Data` folder. Do not modify `namespace`.
+1. Create a commit in `Git` to see all changes after running the wizard.
+1. In a temporary project, run the appropriate `wizard`.
+1. **Clinic Context.cs**
+   - `Clinic.Database\Data` 
+1. **appsettings.json**
+   - `Clinic.Web` 
+   - `Clinic.Admin`
+1. **Program.cs**
+   - `Clinic.Web` 
+   - `Clinic.Admin`
+1. **Clinic.Web and Clinic.Admin**
+   - `Microsoft.EntityFrameworkCore.Tools` 
+1. **Views**
+   - Copy folder with created pages
+     - `Clinic.Web` 
+     - `Clinic.Admin`
+   - You do not need to change the model.
+1. **PagesController.cs**
+   - `Clinic.Web` 
+   - `Clinic.Admin`
+
+### TODO

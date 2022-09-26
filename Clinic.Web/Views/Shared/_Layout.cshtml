@@ -31,13 +31,15 @@
         <!-- ============================================================== -->
         <div class="topbar">
             <div class="header15 po-relative">
-                <!-- Infobar  -->
+                <!-- Infobar -->
                 <div class="h15-infobar">
                     <div class="container">
                         <nav class="navbar navbar-expand-lg h15-info-bar">
+                            <!-- Logo -->
                             <a href="index.html" class="navbar-brand">
                                 <img src="~/img/logo.jpg" alt="Medika" />
                             </a>
+                            <!-- Button to show address in the mobile version -->
                             <button class="navbar-toggler shadow-none"
                                     type="button"
                                     data-bs-toggle="collapse"
@@ -47,6 +49,7 @@
                                     aria-label="Toggle navigation">
                                 <span class="sl-icon-options-vertical"></span>
                             </button>
+                            <!-- Address and phone section -->
                             <div class="collapse navbar-collapse" id="h15-info">
                                 <ul class="navbar-nav ms-auto">
                                     <li class="nav-item">
@@ -78,11 +81,12 @@
                         </nav>
                     </div>
                 </div>
-                <!-- Navbar  -->
+                <!-- Navbar -->
                 <div class="h15-navbar pb-2 pb-md-0">
                     <div class="container">
                         <nav class="navbar navbar-expand-lg h15-nav">
                             <h6 class="d-block d-lg-none mb-0 fw-medium">Navigation</h6>
+                            <!-- Button to show menu in the mobile version -->
                             <button class="navbar-toggler shadow-none"
                                     type="button"
                                     data-bs-toggle="collapse"
@@ -92,62 +96,9 @@
                                 <span class="ti-menu"></span>
                             </button>
                             <div class="collapse navbar-collapse" id="header15">
-                                <div class="hover-dropdown">
-                                    <ul class="navbar-nav">
-                                        <li class="nav-item dropdown active">
-                                            <a class="nav-link" href="index.html"> Home </a>
-                                        </li>
-                                        <li class="nav-item dropdown">
-                                            <a class="nav-link dropdown-toggle"
-                                               href="#"
-                                               id="services-dd"
-                                               data-bs-toggle="dropdown"
-                                               aria-haspopup="true"
-                                               aria-expanded="false">
-                                                Services <i class="fa fa-angle-down m-l-5"></i>
-                                            </a>
-                                            <ul class="b-none dropdown-menu fs-3 animated fadeInUp">
-                                                <li>
-                                                    <a class="dropdown-item"
-                                                       href="services.html"
-                                                       target="_blank">Services</a>
-                                                </li>
-                                                <li>
-                                                    <a class="dropdown-item"
-                                                       href="single-services.html"
-                                                       target="_blank">Single Services</a>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                        <li class="nav-item dropdown">
-                                            <a class="nav-link dropdown-toggle"
-                                               href="#"
-                                               id="services-dd"
-                                               data-bs-toggle="dropdown"
-                                               aria-haspopup="true"
-                                               aria-expanded="false">
-                                                Doctors <i class="fa fa-angle-down m-l-5"></i>
-                                            </a>
-                                            <ul class="b-none dropdown-menu fs-3 animated fadeInUp">
-                                                <li>
-                                                    <a class="dropdown-item"
-                                                       href="doctors.html"
-                                                       target="_blank">Doctors</a>
-                                                </li>
-                                                <li>
-                                                    <a class="dropdown-item"
-                                                       href="doctor-details.html"
-                                                       target="_blank">Doctor Details</a>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                        <li class="nav-item dropdown">
-                                            <a class="nav-link" href="departments.html">
-                                                Departments
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
+                                <!-- Top menu -->
+                                @await Html.PartialAsync("Partial/TopMenu",(IEnumerable<Clinic.Database.Data.Page>)ViewBag.ModelMenu)
+                                <!-- Book an Appointment -->
                                 <ul class="navbar-nav ms-auto">
                                     <li class="nav-item search">
                                         <a class="nav-link"
@@ -240,9 +191,7 @@
         <!-- Page wrapper  -->
         <!-- ============================================================== -->
         <div class="page-wrapper">
-            <div class="container-fluid">
                 @RenderBody()
-            </div>
 
             <!-- ============================================================== -->
             <!-- Back to top -->
@@ -279,32 +228,8 @@
                             </div>
                         </div>
                         <!-- Column -->
-                        <div class="col-lg-2 col-md-6">
-                            <ul class="general-listing">
-                                <li>
-                                    <a href="index.html"><i class="fa fa-circle"></i> Home</a>
-                                </li>
-                                <li>
-                                    <a href="services.html"><i class="fa fa-circle"></i> Services</a>
-                                </li>
-                                <li>
-                                    <a href="departments.html"><i class="fa fa-circle"></i> Departments</a>
-                                </li>
-                                <li>
-                                    <a href="doctors.html"><i class="fa fa-circle"></i> Doctors</a>
-                                </li>
-                                <li>
-                                    <a href="page-blog.html">
-                                        <i class="fa fa-circle"></i> Blog
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="contact.html">
-                                        <i class="fa fa-circle"></i> Contact
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
+                        <!-- Bottom menu -->
+                        @await Html.PartialAsync("Partial/BottomMenu",(IEnumerable<Clinic.Database.Data.Page>)ViewBag.ModelMenu)
                         <!-- Column -->
                         <!-- Column -->
                         <div class="col-lg-3 col-md-6 info-box">

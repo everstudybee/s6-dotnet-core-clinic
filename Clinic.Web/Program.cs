@@ -1,4 +1,9 @@
+using Clinic.Database.Data;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
+builder.Services.AddDbContext<ClinicContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("ClinicContext") ?? throw new InvalidOperationException("Connection string 'ClinicContext' not found.")));
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();

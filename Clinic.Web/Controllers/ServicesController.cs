@@ -3,11 +3,11 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Clinic.Web.Controllers
 {
-    public class HomeController : Controller
+    public class ServicesController : Controller
     {
         private readonly ClinicContext _context;
 
-        public HomeController(ClinicContext context)
+        public ServicesController(ClinicContext context)
         {
             _context = context;
         }
@@ -15,6 +15,7 @@ namespace Clinic.Web.Controllers
         public IActionResult Index()
         {
             ViewBag.ModelMenu =
+               ViewBag.ModelMenu =
                 (
                     from page in _context.Page
                     where page.IsActive == true

@@ -1,0 +1,235 @@
+﻿@{
+    ViewData["Title"] = "Departments";
+}
+
+<!-- ============================================================== -->
+<!-- Breadcrumb -->
+<!-- ============================================================== -->
+<div class="banner-innerpage" style="background-image: url(../img/banner-bg5.jpg)">
+    <div class="container">
+        <!-- Row  -->
+        <div class="row justify-content-center">
+            <!-- Column -->
+            <div class="col-12 align-self-center aos-init aos-animate"
+                 data-aos="fade-down"
+                 data-aos-duration="1200">
+                <h1 class="title text-capitalize mb-1">Departments</h1>
+                <ol class="breadcrumb bg-transparent px-0">
+                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                    <li class="breadcrumb-item active">Departments</li>
+                </ol>
+            </div>
+            <!-- Column -->
+        </div>
+    </div>
+</div>
+
+<!-- ============================================================== -->
+<!-- Container fluid -->
+<!-- ============================================================== -->
+<div class="container-fluid">
+    <div class="spacer container">
+        <ul class="
+                list-unstyled
+                nav nav-pills
+                timeTableFilters
+                p-3
+                bg-light
+                mb-4
+                rounded
+              ">
+            <li data-filter="all" class="active nav-item">
+                <a href="javascript:void(0)" class="nav-link link">All Department</a>
+            </li>
+            <li data-filter="general_health" class="nav-item">
+                <a href="javascript:void(0)" class="nav-link link">General health care</a>
+            </li>
+            <li data-filter="rehabilitation" class="nav-item">
+                <a href="javascript:void(0)" class="nav-link link">Rehabilitation center</a>
+            </li>
+            <li data-filter="cancer" class="nav-item">
+                <a href="javascript:void(0)" class="nav-link link">Cancer care</a>
+            </li>
+            <li data-filter="cardiac" class="nav-item">
+                <a href="javascript:void(0)" class="nav-link link">Cardiac clinic</a>
+            </li>
+            <li data-filter="nurology" class="nav-item">
+                <a href="javascript:void(0)" class="nav-link link">Nurology</a>
+            </li>
+            <li data-filter="dental" class="nav-item">
+                <a href="javascript:void(0)" class="nav-link link">Dental care</a>
+            </li>
+        </ul>
+        <div class="row table-responsive">
+            <table class="table timeTable mb-0">
+                <thead>
+                    <tr>
+                        <th class="border-0"></th>
+                        <th class="border-0">sunday</th>
+                        <th class="border-0">monday</th>
+                        <th class="border-0">tuesday</th>
+                        <th class="border-0">wednesday</th>
+                        <th class="border-0">thursday</th>
+                        <th class="border-0">friday</th>
+                        <th class="border-0">saturday</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>07.00 - 08.00</td>
+                        <td class="general_health cell" rowspan="4">
+                            General Health Care<span class="room">Room:18</span><span class="time_b">07.00 - 11.00</span>Prof. John Deo
+                        </td>
+                        <td></td>
+                        <td class="rehabilitation cell" rowspan="4">
+                            Rehabilitation center<span class="room">Room:18</span><span class="time_b">07.00 - 11.00</span>Dr. Manoj Dave
+                        </td>
+                        <td></td>
+                        <td class="rehabilitation cell" rowspan="3">
+                            Rehabilitation center<span class="room">Room:18</span><span class="time_b">07.00 - 10.00</span>Dr. Manoj Dave
+                        </td>
+                        <td class="general_health cell" rowspan="3">
+                            General Health Care<span class="room">Room:18</span><span class="time_b">07.00 - 10.00</span>Prof. John Deo
+                        </td>
+                        <td class="nurology cell" rowspan="3">
+                            Nurology<span class="room">Room:19</span><span class="time_b">07.00 - 10.00</span>Dr. Moxica Nene
+                        </td>
+                    </tr>
+                    <!--Row 1-->
+                    <tr>
+                        <td>08.00 - 09.00</td>
+                        <td></td>
+                        <td class="general_health cell" rowspan="3">
+                            General Health Care<span class="room">Room:18</span><span class="time_b">07.00 - 11.00</span>Prof. John Deo
+                        </td>
+                    </tr>
+                    <!--Row 2-->
+                    <tr>
+                        <td>09.00 - 10.00</td>
+                        <td rowspan="2" class="general_health cell">
+                            General Health Care<span class="room">Room:18</span><span class="time_b">09.00 - 11.00</span>Prof. John Deo
+                        </td>
+                    </tr>
+                    <!--Row 3-->
+                    <tr>
+                        <td>10.00 - 11.00</td>
+                        <td></td>
+                        <td rowspan="3" class="cardiac cell">
+                            Cardiac Clinic<span class="room">Room:18</span><span class="time_b">11.00 - 15.00</span>Dr. Moxica Nene
+                        </td>
+                    </tr>
+                    <!--Row 4-->
+                    <tr>
+                        <td>11.00 - 12.00</td>
+                        <td rowspan="2" class="cancer cell">
+                            Cancer Care<span class="room">Beginners</span><span class="time_b">11.00 - 13.00</span>Martine Lenon
+                        </td>
+                        <td rowspan="4" class="cardiac cell">
+                            Cardiac Clinic<span class="room">Room:18</span><span class="time_b">11.00 - 15.00</span>Dr. Moxica Nene
+                        </td>
+                        <td rowspan="2" class="cancer cell">
+                            Cancer Care<span class="room">Beginners</span><span class="time_b">11.00 - 13.00</span>Martine Lenon
+                        </td>
+                        <td rowspan="3" class="cardiac cell">
+                            Cardiac Clinic<span class="room">Room:18</span><span class="time_b">11.00 - 15.00</span>Dr. Moxica Nene
+                        </td>
+                        <td rowspan="2" class="cancer cell">
+                            Cancer Care<span class="room">Beginners</span><span class="time_b">11.00 - 13.00</span>Martine Lenon
+                        </td>
+                        <td rowspan="3" class="cardiac cell">
+                            Cardiac Clinic<span class="room">Room:18</span><span class="time_b">11.00 - 15.00</span>Dr. Moxica Nene
+                        </td>
+                    </tr>
+                    <!--Row 5-->
+                    <tr>
+                        <td>12.00 - 13.00</td>
+                    </tr>
+                    <!--Row 6-->
+                    <tr>
+                        <td>13.00 - 14.00</td>
+                        <td rowspan="2" class="cardiac cell">
+                            Cardiac Clinic<span class="room">Room:18</span><span class="time_b">11.00 - 15.00</span>Dr. Moxica Nene
+                        </td>
+                        <td rowspan="2" class="cardiac cell">
+                            Cardiac Clinic<span class="room">Room:18</span><span class="time_b">11.00 - 15.00</span>Dr. Moxica Nene
+                        </td>
+                        <td rowspan="3" class="cardiac cell">
+                            Cardiac Clinic<span class="room">Room:18</span><span class="time_b">11.00 - 15.00</span>Dr. Moxica Nene
+                        </td>
+                        <td rowspan="3" class="nurology cell">
+                            Nurology<span class="room">Room:19</span><span class="time_b">07.00 - 10.00</span>Dr. Moxica Nene
+                        </td>
+                    </tr>
+                    <!--Row 7-->
+                    <tr>
+                        <td>14.00 - 15.00</td>
+                    </tr>
+                    <!--Row 8-->
+                    <tr>
+                        <td>15.00 - 16.00</td>
+                        <td rowspan="2" class="nurology cell">
+                            Nurology<span class="room">Room:19</span><span class="time_b">07.00 - 10.00</span>Dr. Moxica Nene
+                        </td>
+                        <td></td>
+                        <td rowspan="2" class="nurology cell">
+                            Nurology<span class="room">Room:19</span><span class="time_b">07.00 - 10.00</span>Dr. Moxica Nene
+                        </td>
+                    </tr>
+                    <!--Row 9-->
+                    <tr>
+                        <td>16.00 - 17.00</td>
+                        <td></td>
+                        <td rowspan="3" class="cancer cell">
+                            Cancer Care<span class="room">Beginners</span><span class="time_b">11.00 - 13.00</span>Martine Lenon
+                        </td>
+                        <td></td>
+                        <td></td>
+                        <td rowspan="3" class="dental cell">
+                            Detal Care<span class="room">Advanced</span><span class="time_b">16.00 - 18.00</span>Kevin Shroof
+                        </td>
+                    </tr>
+                    <!--Row 10-->
+                    <tr>
+                        <td>17.00 - 18.00</td>
+                        <td rowspan="2" class="dental cell">
+                            Detal Care<span class="room">Advanced</span><span class="time_b">16.00 - 18.00</span>Kevin Shroof
+                        </td>
+                        <td rowspan="4" class="cancer cell">
+                            Cancer Care<span class="room">Beginners</span><span class="time_b">11.00 - 13.00</span>Martine Lenon
+                        </td>
+                        <td rowspan="2" class="dental cell">
+                            Detal Care<span class="room">Advanced</span><span class="time_b">16.00 - 18.00</span>Kevin Shroof
+                        </td>
+                        <td rowspan="2" class="dental cell">
+                            Detal Care<span class="room">Advanced</span><span class="time_b">16.00 - 18.00</span>Kevin Shroof
+                        </td>
+                        <td rowspan="4" class="cancer cell">
+                            Cancer Care<span class="room">Beginners</span><span class="time_b">11.00 - 13.00</span>Martine Lenon
+                        </td>
+                    </tr>
+                    <!--Row 11-->
+                    <tr>
+                        <td>17.00 - 18.00</td>
+                    </tr>
+                    <!--Row 12-->
+                    <tr>
+                        <td>18.00 - 19.00</td>
+                        <td></td>
+                        <td rowspan="2" class="cardiac cell">
+                            Cardiac Clinic<span class="room">Room:18</span><span class="time_b">11.00 - 15.00</span>Dr. Moxica Nene
+                        </td>
+                        <td></td>
+                        <td rowspan="2" class="cardiac cell">
+                            Cardiac Clinic<span class="room">Room:18</span><span class="time_b">11.00 - 15.00</span>Dr. Moxica Nene
+                        </td>
+                    </tr>
+                    <!--Row 13-->
+                    <tr>
+                        <td>19.00 - 20.00</td>
+                    </tr>
+                    <!--Row 14-->
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

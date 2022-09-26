@@ -1,0 +1,12 @@
+﻿@model IEnumerable<Clinic.Database.Data.Page>
+
+<div class="col-lg-2 col-md-6">
+    <ul class="general-listing">
+        @foreach(var item in Model)
+        {
+            <li>
+                <a href="@item.PageLink"><i class="fa fa-circle"></i> @item.PageAnchorText</a>
+            </li>
+        }
+    </ul>
+</div>
