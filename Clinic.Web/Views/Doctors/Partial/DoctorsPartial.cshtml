@@ -1,0 +1,117 @@
+﻿@model IEnumerable<Clinic.Database.Data.Doctor>
+
+@{
+    var modelLength = Model.Count();
+}
+
+@for(var i = 1; i <= modelLength; i++)
+{
+    if (i % 2 == 1) {
+        <div class="row  m-t-30">
+            <div class="col-lg-6 col-md-12">
+                <div class="card card-shadow team1">
+                    <div class="card-body py-0">
+                        <!-- Row -->
+                        <div class="row">
+                            <div class="col-md-5 pro-pic po-relative"
+                         style="
+                            background: url(../img/doctors/@Model.ElementAt(i-1).ImageSmall) center center;
+                          ">
+                                <div class="card-img-overlay">
+                                    <div class="
+                                d-flex
+                                no-block
+                                align-items-center
+                                justify-content-center
+                                h-100
+                              ">
+                                        <ul class="list-inline mb-0">
+                                            <li class="list-inline-item">
+                                                <a href="#"><i class="fa fa-facebook"></i></a>
+                                            </li>
+                                            <li class="list-inline-item">
+                                                <a href="#"><i class="fa fa-twitter"></i></a>
+                                            </li>
+                                            <li class="list-inline-item">
+                                                <a href="#">
+                                                    <i class="fa fa-instagram"></i>
+                                                </a>
+                                            </li>
+                                            <li class="list-inline-item">
+                                                <a href="#"><i class="fa fa-behance"></i></a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-7 bg-white">
+                                <div class="p-30">
+                                    <h5 class="fw-medium m-border-0">
+                                        @Model.ElementAt(i-1).Name
+                                    </h5>
+                                    <h6 class="subtitle">@Model.ElementAt(i-1).Specialty</h6>
+                                    <p>
+                                        @Model.ElementAt(i-1).ShortPresentation
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Row -->
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-12">
+                <div class="card card-shadow team1">
+                    <div class="card-body py-0">
+                        <!-- Row -->
+                        <div class="row">
+                            <div class="col-md-5 pro-pic po-relative"
+                         style="
+                            background: url(../img/doctors/@Model.ElementAt(i).ImageSmall) center center;
+                          ">
+                                <div class="card-img-overlay">
+                                    <div class="
+                                d-flex
+                                no-block
+                                align-items-center
+                                justify-content-center
+                                h-100
+                              ">
+                                        <ul class="list-inline mb-0">
+                                            <li class="list-inline-item">
+                                                <a href="#"><i class="fa fa-facebook"></i></a>
+                                            </li>
+                                            <li class="list-inline-item">
+                                                <a href="#"><i class="fa fa-twitter"></i></a>
+                                            </li>
+                                            <li class="list-inline-item">
+                                                <a href="#">
+                                                    <i class="fa fa-instagram"></i>
+                                                </a>
+                                            </li>
+                                            <li class="list-inline-item">
+                                                <a href="#"><i class="fa fa-behance"></i></a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-7 bg-white">
+                                <div class="p-30">
+                                    <h5 class="fw-medium m-border-0">
+                                        @Model.ElementAt(i).Name
+                                    </h5>
+                                    <h6 class="subtitle">@Model.ElementAt(i).Specialty</h6>
+                                    <p>
+                                        @Model.ElementAt(i).ShortPresentation
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Row -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+}

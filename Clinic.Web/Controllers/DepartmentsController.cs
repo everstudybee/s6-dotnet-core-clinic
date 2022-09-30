@@ -23,6 +23,13 @@ namespace Clinic.Web.Controllers
                     select page
                 ).ToList();
 
+            ViewBag.ModelParameter =
+                (
+                    from parameter in _context.Parameter
+                    where parameter.IsActive == true
+                    select parameter
+                ).ToList();
+
             return View();
         }
     }

@@ -22,6 +22,21 @@ namespace Clinic.Web.Controllers
                     select page
                 ).ToList();
 
+            ViewBag.ModelDoctor =
+                (
+                    from doctor in _context.Doctor
+                    where doctor.IsActive == true
+                    orderby doctor.Position
+                    select doctor
+                ).ToList();
+
+            ViewBag.ModelParameter =
+                (
+                    from parameter in _context.Parameter
+                    where parameter.IsActive == true
+                    select parameter
+                ).ToList();
+
             return View();
         }
     }

@@ -1,0 +1,84 @@
+﻿@model IEnumerable<Clinic.Database.Data.Parameter>
+
+<div class="footer2 fs-3 bg-dark">
+    <div class="f2-middle">
+        <div class="container">
+            <div class="row">
+                <!-- Column -->
+                <div class="col-lg-4 col-md-6">
+                    <p class="p-t-10">
+                        @Model.Where(p => p.Code == "footerNote").FirstOrDefault()!.Content
+                    </p>
+                    <div class="m-t-20 m-b-30">
+                        <a href="#" class="link"><i class="fa fa-facebook"></i></a>
+                        <a href="#" class="link"><i class="fa fa-twitter"></i></a>
+                        <a href="#" class="link"><i class="fa fa-linkedin"></i></a>
+                        <a href="#" class="link"><i class="fa fa-pinterest"></i></a>
+                        <a href="#" class="link"><i class="fa fa-instagram"></i></a>
+                    </div>
+                </div>
+                <!-- Column -->
+                <!-- Bottom menu -->
+                @await Html.PartialAsync("Partial/BottomMenu",(IEnumerable<Clinic.Database.Data.Page>)ViewBag.ModelMenu)
+                <!-- Column -->
+                <!-- Column -->
+                <div class="col-lg-3 col-md-6 info-box">
+                    <div class="d-flex no-block">
+                        <div class="display-7 m-r-20 align-self-top">
+                            <i class="icon-Location-2"></i>
+                        </div>
+                        <div class="info">
+                            <p>
+                                @Html.Raw(Model.Where(p => p.Code == "footerAddress").FirstOrDefault()!.Content)
+                            </p>
+                        </div>
+                    </div>
+                    <div class="d-flex no-block">
+                        <div class="display-7 m-r-20 align-self-top">
+                            <i class="icon-Over-Time"></i>
+                        </div>
+                        <div class="info">
+                            <span class="fw-medium db m-t-5">@Model.Where(p => p.Code == "hours").FirstOrDefault()!.Content</span>
+                        </div>
+                    </div>
+                    <div class="d-flex no-block">
+                        <div class="display-7 m-r-20 align-self-top">
+                            <i class="icon-Phone-2"></i>
+                        </div>
+                        <div class="info">
+                            <span class="fw-medium db m-t-5">@Model.Where(p => p.Code == "phone").FirstOrDefault()!.Content</span>
+                        </div>
+                    </div>
+                    <div class="d-flex no-block">
+                        <div class="display-7 m-r-20 align-self-top">
+                            <i class="icon-Mail"></i>
+                        </div>
+                        <div class="info">
+                            <a href="#" class="fw-medium link db py-1">@Model.Where(p => p.Code == "email").FirstOrDefault()!.Content</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Column -->
+                <!-- Column -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="subscribe-box">
+                        <div class="display-4 text-white">
+                            <i class="icon-Mail-3"></i>
+                        </div>
+                        <p>
+                            Nullam erat ametam arcuing lorme pharetra id risus act
+                            sectetur ipsum luctus est.
+                        </p>
+                        <form>
+                            <div class="m-b-20">
+                                <input class="form-control shadow-none"
+                                       placeholder="enter email" />
+                            </div>
+                            <button class="btn btn-info">Join Us</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

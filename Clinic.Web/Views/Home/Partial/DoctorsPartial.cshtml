@@ -1,0 +1,19 @@
+﻿@model IEnumerable<Clinic.Database.Data.Doctor>
+
+@foreach(var item in Model){
+<div class="col-lg-3 col-md-6 wrap-feature14-box">
+    <div class="" data-aos="flip-left" data-aos-duration="1200">
+        <img class="rounded w-100"
+             src="~/img/doctors/@item.ImageSmall"
+             alt="wrappixel kit" />
+        <div class="m-t-30">
+            <a href="./doctor-details.html"
+               class="fw-medium m-border-0 link">@item.Name</a>
+            <h6 class="subtitle">@item.Specialty</h6>
+            <p class="m-t-20">
+                @item.ShortPresentation
+            </p>
+        </div>
+    </div>
+</div>
+}

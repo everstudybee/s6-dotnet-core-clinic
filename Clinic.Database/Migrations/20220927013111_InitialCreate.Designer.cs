@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Clinic.Database.Migrations
 {
     [DbContext(typeof(ClinicContext))]
-    [Migration("20220926021246_InitialCreate")]
+    [Migration("20220927013111_InitialCreate")]
     partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -151,7 +151,58 @@ namespace Clinic.Database.Migrations
                             Position = 1,
                             ShortPresentation = "Short presentation",
                             Specialty = "Heart Surgery",
-                            WhenAdded = new DateTime(2022, 9, 26, 4, 12, 46, 435, DateTimeKind.Local).AddTicks(7688)
+                            WhenAdded = new DateTime(2022, 9, 27, 3, 31, 10, 690, DateTimeKind.Local).AddTicks(9154)
+                        },
+                        new
+                        {
+                            DoctorId = 2,
+                            Area = "London, USA",
+                            Biography = "<p>Biography</p>",
+                            Certifications = "USA Board Neurological Surgery",
+                            Education = "University of California, USA",
+                            Experience = "15+ Years",
+                            Image = "detail-dr1.jpg",
+                            ImageSmall = "t2.jpg",
+                            IsHomePage = true,
+                            Name = "Dr. Micheal Anderson",
+                            Position = 1,
+                            ShortPresentation = "Short presentation",
+                            Specialty = "Heart Surgery",
+                            WhenAdded = new DateTime(2022, 9, 27, 3, 31, 10, 690, DateTimeKind.Local).AddTicks(9188)
+                        },
+                        new
+                        {
+                            DoctorId = 3,
+                            Area = "London, USA",
+                            Biography = "<p>Biography</p>",
+                            Certifications = "USA Board Neurological Surgery",
+                            Education = "University of California, USA",
+                            Experience = "15+ Years",
+                            Image = "detail-dr1.jpg",
+                            ImageSmall = "t3.jpg",
+                            IsHomePage = true,
+                            Name = "Dr. Micheal Anderson",
+                            Position = 1,
+                            ShortPresentation = "Short presentation",
+                            Specialty = "Heart Surgery",
+                            WhenAdded = new DateTime(2022, 9, 27, 3, 31, 10, 690, DateTimeKind.Local).AddTicks(9192)
+                        },
+                        new
+                        {
+                            DoctorId = 4,
+                            Area = "London, USA",
+                            Biography = "<p>Biography</p>",
+                            Certifications = "USA Board Neurological Surgery",
+                            Education = "University of California, USA",
+                            Experience = "15+ Years",
+                            Image = "detail-dr1.jpg",
+                            ImageSmall = "t4.jpg",
+                            IsHomePage = true,
+                            Name = "Dr. Micheal Anderson",
+                            Position = 1,
+                            ShortPresentation = "Short presentation",
+                            Specialty = "Heart Surgery",
+                            WhenAdded = new DateTime(2022, 9, 27, 3, 31, 10, 690, DateTimeKind.Local).AddTicks(9196)
                         });
                 });
 
@@ -224,7 +275,7 @@ namespace Clinic.Database.Migrations
                             PageAnchorText = "Home Page",
                             PageLink = "/Home",
                             PageLinkPosition = 1,
-                            WhenAdded = new DateTime(2022, 9, 26, 4, 12, 46, 432, DateTimeKind.Local).AddTicks(9799)
+                            WhenAdded = new DateTime(2022, 9, 27, 3, 31, 10, 690, DateTimeKind.Local).AddTicks(5998)
                         },
                         new
                         {
@@ -232,7 +283,7 @@ namespace Clinic.Database.Migrations
                             PageAnchorText = "Services",
                             PageLink = "/Services",
                             PageLinkPosition = 2,
-                            WhenAdded = new DateTime(2022, 9, 26, 4, 12, 46, 432, DateTimeKind.Local).AddTicks(9840)
+                            WhenAdded = new DateTime(2022, 9, 27, 3, 31, 10, 690, DateTimeKind.Local).AddTicks(6044)
                         },
                         new
                         {
@@ -240,7 +291,7 @@ namespace Clinic.Database.Migrations
                             PageAnchorText = "Doctors",
                             PageLink = "/Doctors",
                             PageLinkPosition = 3,
-                            WhenAdded = new DateTime(2022, 9, 26, 4, 12, 46, 432, DateTimeKind.Local).AddTicks(9844)
+                            WhenAdded = new DateTime(2022, 9, 27, 3, 31, 10, 690, DateTimeKind.Local).AddTicks(6046)
                         },
                         new
                         {
@@ -248,7 +299,114 @@ namespace Clinic.Database.Migrations
                             PageAnchorText = "Appointments",
                             PageLink = "/Appointments",
                             PageLinkPosition = 4,
-                            WhenAdded = new DateTime(2022, 9, 26, 4, 12, 46, 432, DateTimeKind.Local).AddTicks(9848)
+                            WhenAdded = new DateTime(2022, 9, 27, 3, 31, 10, 690, DateTimeKind.Local).AddTicks(6048)
+                        });
+                });
+
+            modelBuilder.Entity("Clinic.Database.Data.Parameter", b =>
+                {
+                    b.Property<int>("ParameterId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasColumnOrder(0);
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ParameterId"), 1L, 1);
+
+                    b.Property<string>("Code")
+                        .IsRequired()
+                        .HasMaxLength(20)
+                        .HasColumnType("nvarchar(20)")
+                        .HasColumnOrder(1);
+
+                    b.Property<string>("Content")
+                        .IsRequired()
+                        .HasMaxLength(200)
+                        .HasColumnType("nvarchar(200)")
+                        .HasColumnOrder(3);
+
+                    b.Property<bool?>("IsActive")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bit")
+                        .HasDefaultValue(true);
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasMaxLength(30)
+                        .HasColumnType("nvarchar(30)")
+                        .HasColumnOrder(2);
+
+                    b.Property<DateTime>("WhenAdded")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime?>("WhenModified")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime?>("WhenRemoved")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("WhoAdded")
+                        .IsRequired()
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("nvarchar(max)")
+                        .HasDefaultValue("Admin");
+
+                    b.Property<string>("WhoModified")
+                        .IsRequired()
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("nvarchar(max)")
+                        .HasDefaultValue("Admin");
+
+                    b.Property<string>("WhoRemoved")
+                        .IsRequired()
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("nvarchar(max)")
+                        .HasDefaultValue("Admin");
+
+                    b.HasKey("ParameterId");
+
+                    b.ToTable("Parameter");
+
+                    b.HasData(
+                        new
+                        {
+                            ParameterId = 1,
+                            Code = "footerNote",
+                            Content = "Nullam erat ametam arcu lorme pharetra id risus act sectetur ipsum luctus est ullam erat ametam arcu lorme pharetra id us act sectetur ipsum luctus est.",
+                            Name = "Footer note",
+                            WhenAdded = new DateTime(2022, 9, 27, 3, 31, 10, 691, DateTimeKind.Local).AddTicks(2036)
+                        },
+                        new
+                        {
+                            ParameterId = 2,
+                            Code = "footerAddress",
+                            Content = "134, Cornish Building, Some <br />Near by area, New York, <br />USA - 34556",
+                            Name = "Footer address",
+                            WhenAdded = new DateTime(2022, 9, 27, 3, 31, 10, 691, DateTimeKind.Local).AddTicks(2060)
+                        },
+                        new
+                        {
+                            ParameterId = 3,
+                            Code = "hours",
+                            Content = "8.00 AM - 6:00PM",
+                            Name = "Open hours",
+                            WhenAdded = new DateTime(2022, 9, 27, 3, 31, 10, 691, DateTimeKind.Local).AddTicks(2064)
+                        },
+                        new
+                        {
+                            ParameterId = 4,
+                            Code = "phone",
+                            Content = "1 (888) 123 4567",
+                            Name = "Phone",
+                            WhenAdded = new DateTime(2022, 9, 27, 3, 31, 10, 691, DateTimeKind.Local).AddTicks(2066)
+                        },
+                        new
+                        {
+                            ParameterId = 5,
+                            Code = "email",
+                            Content = "info@Medika.com",
+                            Name = "Email",
+                            WhenAdded = new DateTime(2022, 9, 27, 3, 31, 10, 691, DateTimeKind.Local).AddTicks(2069)
                         });
                 });
 #pragma warning restore 612, 618

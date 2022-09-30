@@ -12,10 +12,9 @@ namespace Clinic.Web.Controllers
             _context = context;
         }
 
-        public IActionResult Index()
+        public IActionResult Index(int? id)
         {
             ViewBag.ModelMenu =
-               ViewBag.ModelMenu =
                 (
                     from page in _context.Page
                     where page.IsActive == true
@@ -23,7 +22,29 @@ namespace Clinic.Web.Controllers
                     select page
                 ).ToList();
 
-            return View();
+            ViewBag.ModelDoctor =
+                (
+                    from doctor in _context.Doctor
+                    where doctor.IsActive == true
+                    orderby doctor.Position
+                    select doctor
+                ).ToList();
+
+            ViewBag.ModelParameter =
+                (
+                    from parameter in _context.Parameter
+                    where parameter.IsActive == true
+                    select parameter
+                ).ToList();
+
+            if(id == null)
+            {
+                return View();
+            }
+
+            var pageId = _context.Doctor?.Find(id);
+
+            return View(pageId);
         }
     }
 }

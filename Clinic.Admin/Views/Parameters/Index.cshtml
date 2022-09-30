@@ -1,4 +1,4 @@
-﻿@model IEnumerable<Clinic.Database.Data.Page>
+﻿@model IEnumerable<Clinic.Database.Data.Parameter>
 
 @{
     ViewData["Title"] = "Index";
@@ -13,13 +13,13 @@
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.PageAnchorText)
+                @Html.DisplayNameFor(model => model.Code)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.PageLink)
+                @Html.DisplayNameFor(model => model.Name)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.PageLinkPosition)
+                @Html.DisplayNameFor(model => model.Content)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.WhoAdded)
@@ -38,13 +38,13 @@
         {
             <tr>
                 <td>
-                    @Html.DisplayFor(modelItem => item.PageAnchorText)
+                    @Html.DisplayFor(modelItem => item.Code)
                 </td>
                 <td>
-                    @Html.DisplayFor(modelItem => item.PageLink)
+                    @Html.DisplayFor(modelItem => item.Name)
                 </td>
                 <td>
-                    @Html.DisplayFor(modelItem => item.PageLinkPosition)
+                    @Html.DisplayFor(modelItem => item.Content)
                 </td>
                 <td>
                     @Html.DisplayFor(modelItem => item.WhoAdded)
@@ -56,9 +56,9 @@
                     @Html.DisplayFor(modelItem => item.IsActive)
                 </td>
                 <td class="table-actions">
-                    <a asp-action="Edit" asp-route-id="@item.PageId"><img src="~/img/pencil-square.svg" alt="Edit" width="24" height="24"></a> |
-                    <a asp-action="Details" asp-route-id="@item.PageId"><img src="~/img/info-square.svg" alt="Details" width="24" height="24"></a> |
-                    <a asp-action="Delete" asp-route-id="@item.PageId"><img src="~/img/x-square.svg" alt="Delete" width="24" height="24"></a>
+                    <a asp-action="Edit" asp-route-id="@item.ParameterId"><img src="~/img/pencil-square.svg" alt="Edit" width="24" height="24"></a> |
+                    <a asp-action="Details" asp-route-id="@item.ParameterId"><img src="~/img/info-square.svg" alt="Details" width="24" height="24"></a> |
+                    <a asp-action="Delete" asp-route-id="@item.ParameterId"><img src="~/img/x-square.svg" alt="Delete" width="24" height="24"></a>
                 </td>
             </tr>
         }

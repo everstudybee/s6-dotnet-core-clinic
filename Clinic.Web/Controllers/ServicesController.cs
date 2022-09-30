@@ -15,12 +15,18 @@ namespace Clinic.Web.Controllers
         public IActionResult Index()
         {
             ViewBag.ModelMenu =
-               ViewBag.ModelMenu =
                 (
                     from page in _context.Page
                     where page.IsActive == true
                     orderby page.PageLinkPosition
                     select page
+                ).ToList();
+
+            ViewBag.ModelParameter =
+                (
+                    from parameter in _context.Parameter
+                    where parameter.IsActive == true
+                    select parameter
                 ).ToList();
 
             return View();

@@ -4,85 +4,85 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Clinic.Admin.Controllers
 {
-    public class PagesController : Controller
+    public class ParametersController : Controller
     {
         private readonly ClinicContext _context;
 
-        public PagesController(ClinicContext context)
+        public ParametersController(ClinicContext context)
         {
             _context = context;
         }
 
-        // GET: Pages
+        // GET: Parameters
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Page.ToListAsync());
+            return View(await _context.Parameter.ToListAsync());
         }
 
-        // GET: Pages/Details/5
+        // GET: Parameters/Details/5
         public async Task<IActionResult> Details(int? id)
         {
-            if(id == null || _context.Page == null)
+            if(id == null || _context.Parameter == null)
             {
                 return NotFound();
             }
 
-            var page = await _context.Page
-                .FirstOrDefaultAsync(m => m.PageId == id);
-            if(page == null)
+            var parameter = await _context.Parameter
+                .FirstOrDefaultAsync(m => m.ParameterId == id);
+            if(parameter == null)
             {
                 return NotFound();
             }
 
-            return View(page);
+            return View(parameter);
         }
 
-        // GET: Pages/Create
+        // GET: Parameters/Create
         public IActionResult Create()
         {
             return View();
         }
 
-        // POST: Pages/Create
+        // POST: Parameters/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("PageId,PageAnchorText,PageLink,PageLinkPosition,WhoAdded,WhenAdded,WhoModified,WhenModified,WhoRemoved,WhenRemoved,IsActive")] Page page)
+        public async Task<IActionResult> Create([Bind("ParameterId,Code,Name,Content,WhoAdded,WhenAdded,WhoModified,WhenModified,WhoRemoved,WhenRemoved,IsActive")] Parameter parameter)
         {
             if(ModelState.IsValid)
             {
-                _context.Add(page);
+                _context.Add(parameter);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            return View(page);
+            return View(parameter);
         }
 
-        // GET: Pages/Edit/5
+        // GET: Parameters/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
-            if(id == null || _context.Page == null)
+            if(id == null || _context.Parameter == null)
             {
                 return NotFound();
             }
 
-            var page = await _context.Page.FindAsync(id);
-            if(page == null)
+            var parameter = await _context.Parameter.FindAsync(id);
+            if(parameter == null)
             {
                 return NotFound();
             }
-            return View(page);
+            return View(parameter);
         }
 
-        // POST: Pages/Edit/5
+        // POST: Parameters/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("PageId,PageAnchorText,PageLink,PageLinkPosition,WhoAdded,WhenAdded,WhoModified,WhenModified,WhoRemoved,WhenRemoved,IsActive")] Page page)
+        public async Task<IActionResult> Edit(int id, [Bind("ParameterId,Code,Name,Content,WhoAdded,WhenAdded,WhoModified,WhenModified,WhoRemoved,WhenRemoved,IsActive")] Parameter parameter)
         {
-            if(id != page.PageId)
+            if(id != parameter.ParameterId)
             {
                 return NotFound();
             }
@@ -91,12 +91,12 @@ namespace Clinic.Admin.Controllers
             {
                 try
                 {
-                    _context.Update(page);
+                    _context.Update(parameter);
                     await _context.SaveChangesAsync();
                 }
                 catch(DbUpdateConcurrencyException)
                 {
-                    if(!PageExists(page.PageId))
+                    if(!ParameterExists(parameter.ParameterId))
                     {
                         return NotFound();
                     }
@@ -107,49 +107,49 @@ namespace Clinic.Admin.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            return View(page);
+            return View(parameter);
         }
 
-        // GET: Pages/Delete/5
+        // GET: Parameters/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
-            if(id == null || _context.Page == null)
+            if(id == null || _context.Parameter == null)
             {
                 return NotFound();
             }
 
-            var page = await _context.Page
-                .FirstOrDefaultAsync(m => m.PageId == id);
-            if(page == null)
+            var parameter = await _context.Parameter
+                .FirstOrDefaultAsync(m => m.ParameterId == id);
+            if(parameter == null)
             {
                 return NotFound();
             }
 
-            return View(page);
+            return View(parameter);
         }
 
-        // POST: Pages/Delete/5
+        // POST: Parameters/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            if(_context.Page == null)
+            if(_context.Parameter == null)
             {
-                return Problem("Entity set 'ClinicContext.Page'  is null.");
+                return Problem("Entity set 'ClinicContext.Parameter'  is null.");
             }
-            var page = await _context.Page.FindAsync(id);
-            if(page != null)
+            var parameter = await _context.Parameter.FindAsync(id);
+            if(parameter != null)
             {
-                _context.Page.Remove(page);
+                _context.Parameter.Remove(parameter);
             }
 
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
-        private bool PageExists(int id)
+        private bool ParameterExists(int id)
         {
-            return _context.Page.Any(e => e.PageId == id);
+            return _context.Parameter.Any(e => e.ParameterId == id);
         }
     }
 }
