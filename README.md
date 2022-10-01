@@ -36,6 +36,12 @@ Web application for managing the Clinic. It enables the registration of doctors,
 
 Main assumptions:
 
+- The division of the solution into projects:
+   - `Clinic.DataAccess` - Data Access Layer (DAL)
+   - `Clinic.Entities` - Data Transfer Objects (DTOs) and seeding configuration
+   - `Clinic.Logic` - Business Logic Layer (BLL)
+   - `Clinic.WebAdmin` - website for administrators
+   - `Clinic.WebPatient` - website for patients
 - MS SQL Server database,
 - Code-First approach,
 - Seeding 
