@@ -1,20 +1,19 @@
 ﻿using Clinic.DataAccess.Data;
 using Microsoft.AspNetCore.Mvc;
 
-namespace Clinic.WebAdmin.Controllers
+namespace Clinic.WebAdmin.Controllers;
+
+public class HomeController : Controller
 {
-    public class HomeController : Controller
+    private readonly ClinicContext _context;
+
+    public HomeController(ClinicContext context)
     {
-        private readonly ClinicContext _context;
+        _context = context;
+    }
 
-        public HomeController(ClinicContext context)
-        {
-            _context = context;
-        }
-
-        public IActionResult Index()
-        {
-            return View();
-        }
+    public IActionResult Index()
+    {
+        return View();
     }
 }
