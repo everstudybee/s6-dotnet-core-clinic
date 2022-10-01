@@ -2,26 +2,18 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace Clinic.Models.Configuration;
+namespace Clinic.Entities.Configuration;
 
 public class PageConfiguration : IEntityTypeConfiguration<Page>
 {
     public void Configure(EntityTypeBuilder<Page> builder)
     {
         builder.Property(b => b.WhoAdded)
-                .HasDefaultValue("Admin");
-        builder.Property(b => b.WhenAdded)
-            .ValueGeneratedOnAdd();
-        builder.Property(b => b.WhoModified)
-            .HasDefaultValue("Admin");
-        builder.Property(b => b.WhenAdded)
-            .ValueGeneratedOnAddOrUpdate();
-        builder.Property(b => b.WhoRemoved)
             .HasDefaultValue("Admin");
         builder.Property(b => b.WhenAdded)
             .ValueGeneratedOnAdd();
         builder.Property(b => b.IsActive)
-        .HasDefaultValue(true);
+            .HasDefaultValue(true);
 
         builder.HasData(
             new

@@ -1,5 +1,5 @@
-﻿using Clinic.Entities.Models;
-using Clinic.Models.Configuration;
+﻿using Clinic.Entities.Configuration;
+using Clinic.Entities.Models;
 using Microsoft.EntityFrameworkCore;
 
 namespace Clinic.DataAccess.Data

@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace Clinic.Models.Inherited
+namespace Clinic.Entities.Models.Inherited
 {
     public class InheritedFields
     {
@@ -11,13 +11,13 @@ namespace Clinic.Models.Inherited
         public DateTime WhenAdded { get; set; }
 
         [Display(Name = "Who modified")]
-        public string WhoModified { get; set; } = string.Empty;
+        public string? WhoModified { get; set; }
 
         [Display(Name = "When modified")]
         public DateTime? WhenModified { get; set; }
 
         [Display(Name = "Who removed")]
-        public string WhoRemoved { get; set; } = string.Empty;
+        public string? WhoRemoved { get; set; }
 
         [Display(Name = "When removed")]
         public DateTime? WhenRemoved { get; set; }

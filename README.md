@@ -68,4 +68,4 @@ To use the wizards correctly, the Clinic.Database project must contain an additi
 
 ### Seeding
 
-1. 
+1. Add seeding with main data - https://code-maze.com/migrations-and-seed-data-efcore/
