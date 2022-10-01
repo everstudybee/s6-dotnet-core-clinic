@@ -32,36 +32,40 @@
 
 ### DESCRIPTION
 
-Web application for managing the Clinic. It enables the registration of doctors, patients and visits. MS SQL Server database, Code-First approach. 
+Web application for managing the Clinic. It enables the registration of doctors, patients and visits.
 
-### ASP.NET Core MVC web app: controller wizard issue
+Main assumptions:
 
-1. [Stackoverflow](https://stackoverflow.com/questions/73833413/asp-net-core-mvc-web-app-controller-wizard-issue)
-2. [GitHub dotnet/Scaffolding](https://github.com/dotnet/Scaffolding/issues/2019)  
-3. [Youtube - .NET Identity Scaffolding Error](https://youtu.be/VFq4aeP0XWQ)
+- MS SQL Server database,
+- Code-First approach,
+- Seeding 
 
-Solution
-1. The solution is in the last link
-1. Copy the model from `Clinic.Database`. Entire `Data` folder. Do not modify `namespace`.
-1. Create a commit in `Git` to see all changes after running the wizard.
-1. In a temporary project, run the appropriate `wizard`.
-1. **Clinic Context.cs**
-   - `Clinic.Database\Data` 
-1. **appsettings.json**
-   - `Clinic.Web` 
-   - `Clinic.Admin`
-1. **Program.cs**
-   - `Clinic.Web` 
-   - `Clinic.Admin`
-1. **Clinic.Web and Clinic.Admin**
-   - `Microsoft.EntityFrameworkCore.Tools` 
-1. **Views**
-   - Copy folder with created pages
-     - `Clinic.Web` 
-     - `Clinic.Admin`
-   - You do not need to change the model.
-1. **PagesController.cs**
-   - `Clinic.Web` 
-   - `Clinic.Admin`
+### Configuring the Clinic.Database project to create a temporary context when using the wizards
 
-### TODO
+To use the wizards correctly, the Clinic.Database project must contain an additional class that creates a temporary context 
+- https://github.com/dotnet/Scaffolding/issues/1765#issuecomment-1058674843
+- https://learn.microsoft.com/en-us/ef/core/cli/dbcontext-creation?tabs=dotnet-core-cli#from-a-design-time-factory
+
+### Configuration of packages in projects
+
+#### Packages in Clinic.Databse project
+
+1. Explicitly, you only need to declare these packages. Packages appearing as dependencies can also be declared explicitly, but this only results in the information about the possibility of their update.
+   - `Microsoft.EntityFrameworkCore.SqlServer`
+1. The rest of the packages act as dependencies on other packages.
+   - `Microsoft.EntityFrameworkCore.Relational`
+   - `Microsoft.EntityFrameworkCore`
+
+#### Packages in Clinic.Admin and Clinic.Web projects
+
+1. Explicitly, you only need to declare these packages. Packages appearing as dependencies can also be declared explicitly, but this only results in the information about the possibility of their update.
+   - `Microsoft.EntityFrameworkCore.SqlServer`
+   - `Microsoft.EntityFrameworkCore.Tools`
+1. The rest of the packages act as dependencies on other packages.
+   - `Microsoft.EntityFrameworkCore.Relational`
+   - `Microsoft.EntityFrameworkCore`
+   - `Microsoft.EntityFrameworkCore.Design`
+
+### Seeding
+
+1. 
