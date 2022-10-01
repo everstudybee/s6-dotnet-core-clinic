@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace Clinic.DataAccess.Data.Inherited
+namespace Clinic.Models.Inherited
 {
     public class InheritedFields
     {

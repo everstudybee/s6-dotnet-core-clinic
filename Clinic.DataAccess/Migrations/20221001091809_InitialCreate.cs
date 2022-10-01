@@ -88,10 +88,10 @@ namespace Clinic.DataAccess.Migrations
                 columns: new[] { "DoctorId", "Area", "Biography", "Certifications", "Education", "Experience", "Image", "ImageSmall", "IsHomePage", "Name", "Position", "ShortPresentation", "Specialty", "WhenAdded", "WhenModified", "WhenRemoved" },
                 values: new object[,]
                 {
-                    { 1, "London, USA", "<p>Biography</p>", "USA Board Neurological Surgery", "University of California, USA", "15+ Years", "detail-dr1.jpg", "t1.jpg", true, "Dr. Micheal Anderson", 1, "Short presentation", "Heart Surgery", new DateTime(2022, 10, 1, 10, 39, 36, 595, DateTimeKind.Local).AddTicks(1501), null, null },
-                    { 2, "London, USA", "<p>Biography</p>", "USA Board Neurological Surgery", "University of California, USA", "15+ Years", "detail-dr1.jpg", "t2.jpg", true, "Dr. Micheal Anderson", 1, "Short presentation", "Heart Surgery", new DateTime(2022, 10, 1, 10, 39, 36, 595, DateTimeKind.Local).AddTicks(1511), null, null },
-                    { 3, "London, USA", "<p>Biography</p>", "USA Board Neurological Surgery", "University of California, USA", "15+ Years", "detail-dr1.jpg", "t3.jpg", true, "Dr. Micheal Anderson", 1, "Short presentation", "Heart Surgery", new DateTime(2022, 10, 1, 10, 39, 36, 595, DateTimeKind.Local).AddTicks(1514), null, null },
-                    { 4, "London, USA", "<p>Biography</p>", "USA Board Neurological Surgery", "University of California, USA", "15+ Years", "detail-dr1.jpg", "t4.jpg", true, "Dr. Micheal Anderson", 1, "Short presentation", "Heart Surgery", new DateTime(2022, 10, 1, 10, 39, 36, 595, DateTimeKind.Local).AddTicks(1516), null, null }
+                    { 1, "London, USA", "<p>Biography</p>", "USA Board Neurological Surgery", "University of California, USA", "15+ Years", "detail-dr1.jpg", "t1.jpg", true, "Dr. Micheal Anderson", 1, "Short presentation", "Heart Surgery", new DateTime(2022, 10, 1, 11, 18, 8, 857, DateTimeKind.Local).AddTicks(7992), null, null },
+                    { 2, "London, USA", "<p>Biography</p>", "USA Board Neurological Surgery", "University of California, USA", "15+ Years", "detail-dr1.jpg", "t2.jpg", true, "Dr. Micheal Anderson", 1, "Short presentation", "Heart Surgery", new DateTime(2022, 10, 1, 11, 18, 8, 857, DateTimeKind.Local).AddTicks(8004), null, null },
+                    { 3, "London, USA", "<p>Biography</p>", "USA Board Neurological Surgery", "University of California, USA", "15+ Years", "detail-dr1.jpg", "t3.jpg", true, "Dr. Micheal Anderson", 1, "Short presentation", "Heart Surgery", new DateTime(2022, 10, 1, 11, 18, 8, 857, DateTimeKind.Local).AddTicks(8007), null, null },
+                    { 4, "London, USA", "<p>Biography</p>", "USA Board Neurological Surgery", "University of California, USA", "15+ Years", "detail-dr1.jpg", "t4.jpg", true, "Dr. Micheal Anderson", 1, "Short presentation", "Heart Surgery", new DateTime(2022, 10, 1, 11, 18, 8, 857, DateTimeKind.Local).AddTicks(8009), null, null }
                 });
 
             migrationBuilder.InsertData(
@@ -99,10 +99,10 @@ namespace Clinic.DataAccess.Migrations
                 columns: new[] { "PageId", "PageAnchorText", "PageLink", "PageLinkPosition", "WhenAdded", "WhenModified", "WhenRemoved" },
                 values: new object[,]
                 {
-                    { 1, "Home Page", "/Home", 1, new DateTime(2022, 10, 1, 10, 39, 36, 595, DateTimeKind.Local).AddTicks(385), null, null },
-                    { 2, "Doctors", "/Doctors", 3, new DateTime(2022, 10, 1, 10, 39, 36, 595, DateTimeKind.Local).AddTicks(425), null, null },
-                    { 3, "Services", "/Services", 2, new DateTime(2022, 10, 1, 10, 39, 36, 595, DateTimeKind.Local).AddTicks(428), null, null },
-                    { 4, "Appointments", "/Appointments", 4, new DateTime(2022, 10, 1, 10, 39, 36, 595, DateTimeKind.Local).AddTicks(430), null, null }
+                    { 1, "Home", "/Home", 1, new DateTime(2022, 10, 1, 11, 18, 8, 857, DateTimeKind.Local).AddTicks(6608), null, null },
+                    { 2, "Doctors", "/Doctors", 2, new DateTime(2022, 10, 1, 11, 18, 8, 857, DateTimeKind.Local).AddTicks(6645), null, null },
+                    { 3, "Services", "/Services", 3, new DateTime(2022, 10, 1, 11, 18, 8, 857, DateTimeKind.Local).AddTicks(6648), null, null },
+                    { 4, "Appointments", "/Appointments", 4, new DateTime(2022, 10, 1, 11, 18, 8, 857, DateTimeKind.Local).AddTicks(6650), null, null }
                 });
 
             migrationBuilder.InsertData(
@@ -110,11 +110,11 @@ namespace Clinic.DataAccess.Migrations
                 columns: new[] { "ParameterId", "Code", "Content", "Name", "WhenAdded", "WhenModified", "WhenRemoved" },
                 values: new object[,]
                 {
-                    { 1, "footerNote", "Nullam erat ametam arcu lorme pharetra id risus act sectetur ipsum luctus est ullam erat ametam arcu lorme pharetra id us act sectetur ipsum luctus est.", "Footer note", new DateTime(2022, 10, 1, 10, 39, 36, 595, DateTimeKind.Local).AddTicks(2903), null, null },
-                    { 2, "footerAddress", "134, Cornish Building, Some <br />Near by area, New York, <br />USA - 34556", "Footer address", new DateTime(2022, 10, 1, 10, 39, 36, 595, DateTimeKind.Local).AddTicks(2915), null, null },
-                    { 3, "hours", "8.00 AM - 6:00PM", "Open hours", new DateTime(2022, 10, 1, 10, 39, 36, 595, DateTimeKind.Local).AddTicks(2918), null, null },
-                    { 4, "phone", "1 (888) 123 4567", "Phone", new DateTime(2022, 10, 1, 10, 39, 36, 595, DateTimeKind.Local).AddTicks(2920), null, null },
-                    { 5, "email", "info@Medika.com", "Email", new DateTime(2022, 10, 1, 10, 39, 36, 595, DateTimeKind.Local).AddTicks(2922), null, null }
+                    { 1, "footerNote", "Nullam erat ametam arcu lorme pharetra id risus act sectetur ipsum luctus est ullam erat ametam arcu lorme pharetra id us act sectetur ipsum luctus est.", "Footer note", new DateTime(2022, 10, 1, 11, 18, 8, 857, DateTimeKind.Local).AddTicks(9084), null, null },
+                    { 2, "footerAddress", "134, Cornish Building, Some <br />Near by area, New York, <br />USA - 34556", "Footer address", new DateTime(2022, 10, 1, 11, 18, 8, 857, DateTimeKind.Local).AddTicks(9093), null, null },
+                    { 3, "hours", "8.00 AM - 6:00PM", "Open hours", new DateTime(2022, 10, 1, 11, 18, 8, 857, DateTimeKind.Local).AddTicks(9095), null, null },
+                    { 4, "phone", "1 (888) 123 4567", "Phone", new DateTime(2022, 10, 1, 11, 18, 8, 857, DateTimeKind.Local).AddTicks(9097), null, null },
+                    { 5, "email", "info@Medika.com", "Email", new DateTime(2022, 10, 1, 11, 18, 8, 857, DateTimeKind.Local).AddTicks(9099), null, null }
                 });
         }
 

@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Clinic.DataAccess.Migrations
 {
     [DbContext(typeof(ClinicContext))]
-    [Migration("20221001083937_InitialCreate")]
+    [Migration("20221001091809_InitialCreate")]
     partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -24,7 +24,7 @@ namespace Clinic.DataAccess.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
 
-            modelBuilder.Entity("Clinic.Database.Data.Doctor", b =>
+            modelBuilder.Entity("Clinic.Models.Doctor", b =>
                 {
                     b.Property<int>("DoctorId")
                         .ValueGeneratedOnAdd()
@@ -151,7 +151,7 @@ namespace Clinic.DataAccess.Migrations
                             Position = 1,
                             ShortPresentation = "Short presentation",
                             Specialty = "Heart Surgery",
-                            WhenAdded = new DateTime(2022, 10, 1, 10, 39, 36, 595, DateTimeKind.Local).AddTicks(1501)
+                            WhenAdded = new DateTime(2022, 10, 1, 11, 18, 8, 857, DateTimeKind.Local).AddTicks(7992)
                         },
                         new
                         {
@@ -168,7 +168,7 @@ namespace Clinic.DataAccess.Migrations
                             Position = 1,
                             ShortPresentation = "Short presentation",
                             Specialty = "Heart Surgery",
-                            WhenAdded = new DateTime(2022, 10, 1, 10, 39, 36, 595, DateTimeKind.Local).AddTicks(1511)
+                            WhenAdded = new DateTime(2022, 10, 1, 11, 18, 8, 857, DateTimeKind.Local).AddTicks(8004)
                         },
                         new
                         {
@@ -185,7 +185,7 @@ namespace Clinic.DataAccess.Migrations
                             Position = 1,
                             ShortPresentation = "Short presentation",
                             Specialty = "Heart Surgery",
-                            WhenAdded = new DateTime(2022, 10, 1, 10, 39, 36, 595, DateTimeKind.Local).AddTicks(1514)
+                            WhenAdded = new DateTime(2022, 10, 1, 11, 18, 8, 857, DateTimeKind.Local).AddTicks(8007)
                         },
                         new
                         {
@@ -202,11 +202,11 @@ namespace Clinic.DataAccess.Migrations
                             Position = 1,
                             ShortPresentation = "Short presentation",
                             Specialty = "Heart Surgery",
-                            WhenAdded = new DateTime(2022, 10, 1, 10, 39, 36, 595, DateTimeKind.Local).AddTicks(1516)
+                            WhenAdded = new DateTime(2022, 10, 1, 11, 18, 8, 857, DateTimeKind.Local).AddTicks(8009)
                         });
                 });
 
-            modelBuilder.Entity("Clinic.Database.Data.Page", b =>
+            modelBuilder.Entity("Clinic.Models.Page", b =>
                 {
                     b.Property<int>("PageId")
                         .ValueGeneratedOnAdd()
@@ -272,26 +272,26 @@ namespace Clinic.DataAccess.Migrations
                         new
                         {
                             PageId = 1,
-                            PageAnchorText = "Home Page",
+                            PageAnchorText = "Home",
                             PageLink = "/Home",
                             PageLinkPosition = 1,
-                            WhenAdded = new DateTime(2022, 10, 1, 10, 39, 36, 595, DateTimeKind.Local).AddTicks(385)
+                            WhenAdded = new DateTime(2022, 10, 1, 11, 18, 8, 857, DateTimeKind.Local).AddTicks(6608)
                         },
                         new
                         {
                             PageId = 2,
                             PageAnchorText = "Doctors",
                             PageLink = "/Doctors",
-                            PageLinkPosition = 3,
-                            WhenAdded = new DateTime(2022, 10, 1, 10, 39, 36, 595, DateTimeKind.Local).AddTicks(425)
+                            PageLinkPosition = 2,
+                            WhenAdded = new DateTime(2022, 10, 1, 11, 18, 8, 857, DateTimeKind.Local).AddTicks(6645)
                         },
                         new
                         {
                             PageId = 3,
                             PageAnchorText = "Services",
                             PageLink = "/Services",
-                            PageLinkPosition = 2,
-                            WhenAdded = new DateTime(2022, 10, 1, 10, 39, 36, 595, DateTimeKind.Local).AddTicks(428)
+                            PageLinkPosition = 3,
+                            WhenAdded = new DateTime(2022, 10, 1, 11, 18, 8, 857, DateTimeKind.Local).AddTicks(6648)
                         },
                         new
                         {
@@ -299,11 +299,11 @@ namespace Clinic.DataAccess.Migrations
                             PageAnchorText = "Appointments",
                             PageLink = "/Appointments",
                             PageLinkPosition = 4,
-                            WhenAdded = new DateTime(2022, 10, 1, 10, 39, 36, 595, DateTimeKind.Local).AddTicks(430)
+                            WhenAdded = new DateTime(2022, 10, 1, 11, 18, 8, 857, DateTimeKind.Local).AddTicks(6650)
                         });
                 });
 
-            modelBuilder.Entity("Clinic.Database.Data.Parameter", b =>
+            modelBuilder.Entity("Clinic.Models.Parameter", b =>
                 {
                     b.Property<int>("ParameterId")
                         .ValueGeneratedOnAdd()
@@ -374,7 +374,7 @@ namespace Clinic.DataAccess.Migrations
                             Code = "footerNote",
                             Content = "Nullam erat ametam arcu lorme pharetra id risus act sectetur ipsum luctus est ullam erat ametam arcu lorme pharetra id us act sectetur ipsum luctus est.",
                             Name = "Footer note",
-                            WhenAdded = new DateTime(2022, 10, 1, 10, 39, 36, 595, DateTimeKind.Local).AddTicks(2903)
+                            WhenAdded = new DateTime(2022, 10, 1, 11, 18, 8, 857, DateTimeKind.Local).AddTicks(9084)
                         },
                         new
                         {
@@ -382,7 +382,7 @@ namespace Clinic.DataAccess.Migrations
                             Code = "footerAddress",
                             Content = "134, Cornish Building, Some <br />Near by area, New York, <br />USA - 34556",
                             Name = "Footer address",
-                            WhenAdded = new DateTime(2022, 10, 1, 10, 39, 36, 595, DateTimeKind.Local).AddTicks(2915)
+                            WhenAdded = new DateTime(2022, 10, 1, 11, 18, 8, 857, DateTimeKind.Local).AddTicks(9093)
                         },
                         new
                         {
@@ -390,7 +390,7 @@ namespace Clinic.DataAccess.Migrations
                             Code = "hours",
                             Content = "8.00 AM - 6:00PM",
                             Name = "Open hours",
-                            WhenAdded = new DateTime(2022, 10, 1, 10, 39, 36, 595, DateTimeKind.Local).AddTicks(2918)
+                            WhenAdded = new DateTime(2022, 10, 1, 11, 18, 8, 857, DateTimeKind.Local).AddTicks(9095)
                         },
                         new
                         {
@@ -398,7 +398,7 @@ namespace Clinic.DataAccess.Migrations
                             Code = "phone",
                             Content = "1 (888) 123 4567",
                             Name = "Phone",
-                            WhenAdded = new DateTime(2022, 10, 1, 10, 39, 36, 595, DateTimeKind.Local).AddTicks(2920)
+                            WhenAdded = new DateTime(2022, 10, 1, 11, 18, 8, 857, DateTimeKind.Local).AddTicks(9097)
                         },
                         new
                         {
@@ -406,7 +406,7 @@ namespace Clinic.DataAccess.Migrations
                             Code = "email",
                             Content = "info@Medika.com",
                             Name = "Email",
-                            WhenAdded = new DateTime(2022, 10, 1, 10, 39, 36, 595, DateTimeKind.Local).AddTicks(2922)
+                            WhenAdded = new DateTime(2022, 10, 1, 11, 18, 8, 857, DateTimeKind.Local).AddTicks(9099)
                         });
                 });
 #pragma warning restore 612, 618

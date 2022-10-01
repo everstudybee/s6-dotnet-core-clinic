@@ -1,4 +1,4 @@
-﻿using Clinic.Database.Data;
+﻿using Clinic.Models;
 using Microsoft.EntityFrameworkCore;
 
 namespace Clinic.DataAccess.Data

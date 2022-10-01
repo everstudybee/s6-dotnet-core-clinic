@@ -1,8 +1,8 @@
-﻿using Clinic.DataAccess.Data.Inherited;
+﻿using Clinic.Models.Inherited;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace Clinic.Database.Data
+namespace Clinic.Models
 {
     public class Parameter : InheritedFields
     {
