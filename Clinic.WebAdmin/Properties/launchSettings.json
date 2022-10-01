@@ -8,7 +8,7 @@
     }
   },
   "profiles": {
-    "Clinic.Admin": {
+    "Clinic.WebAdmin": {
       "commandName": "Project",
       "dotnetRunMessages": true,
       "launchBrowser": true,

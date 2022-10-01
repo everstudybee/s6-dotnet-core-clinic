@@ -1,7 +1,7 @@
 ﻿using Clinic.DataAccess.Data;
 using Microsoft.AspNetCore.Mvc;
 
-namespace Clinic.Admin.Controllers
+namespace Clinic.WebAdmin.Controllers
 {
     public class HomeController : Controller
     {

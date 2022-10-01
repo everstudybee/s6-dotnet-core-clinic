@@ -2,7 +2,7 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace Clinic.Models
+namespace Clinic.Entities.Models
 {
     public class Page : InheritedFields
     {
@@ -14,13 +14,13 @@ namespace Clinic.Models
         [Required(ErrorMessage = "Write page anchor text")]
         [MaxLength(20, ErrorMessage = "The page anchor text should contain max. 20 characters")]
         [Display(Name = "Page Anchor Text")]
-        public string PageAnchorText { get; set; } = String.Empty;
+        public string PageAnchorText { get; set; } = string.Empty;
 
         [Column(Order = 2)]
         [Required(ErrorMessage = "Write page link")]
         [MaxLength(20, ErrorMessage = "The link should contain max. 20 characters and start with \"/\"")]
         [Display(Name = "Page Link")]
-        public string PageLink { get; set; } = String.Empty;
+        public string PageLink { get; set; } = string.Empty;
 
         [Column(Order = 3)]
         [Required(ErrorMessage = "Set the page link position")]

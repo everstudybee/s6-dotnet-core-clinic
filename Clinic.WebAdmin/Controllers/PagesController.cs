@@ -1,9 +1,9 @@
 ﻿using Clinic.DataAccess.Data;
-using Clinic.Models;
+using Clinic.Entities.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
-namespace Clinic.Admin.Controllers
+namespace Clinic.WebAdmin.Controllers
 {
     public class PagesController : Controller
     {

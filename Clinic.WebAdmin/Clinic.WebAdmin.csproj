@@ -16,7 +16,7 @@
   <ItemGroup>
     <ProjectReference Include="..\Clinic.DataAccess\Clinic.DataAccess.csproj" />
     <ProjectReference Include="..\Clinic.Logic\Clinic.Logic.csproj" />
-    <ProjectReference Include="..\Clinic.Models\Clinic.Models.csproj" />
+    <ProjectReference Include="..\Clinic.Models\Clinic.Entities.csproj" />
   </ItemGroup>
 
 </Project>

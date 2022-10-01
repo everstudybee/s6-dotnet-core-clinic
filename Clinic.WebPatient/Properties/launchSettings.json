@@ -8,7 +8,7 @@
     }
   },
   "profiles": {
-    "Clinic.Web": {
+    "Clinic.WebPatient": {
       "commandName": "Project",
       "dotnetRunMessages": true,
       "launchBrowser": true,

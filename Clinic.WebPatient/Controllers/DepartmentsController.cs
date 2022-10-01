@@ -1,7 +1,7 @@
 ﻿using Clinic.DataAccess.Data;
 using Microsoft.AspNetCore.Mvc;
 
-namespace Clinic.Web.Controllers
+namespace Clinic.WebPatient.Controllers
 {
     public class DepartmentsController : Controller
     {

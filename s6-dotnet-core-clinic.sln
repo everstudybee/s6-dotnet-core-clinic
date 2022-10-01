@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Clinic.Logic", "Clinic.Logi
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Clinic.DataAccess", "Clinic.DataAccess\Clinic.DataAccess.csproj", "{A1A327BF-A601-4AA2-B69E-FA965FE76FB4}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Clinic.Models", "Clinic.Models\Clinic.Models.csproj", "{DECEF23C-D74E-4AFB-AC93-CE7F6F1F28B0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Clinic.Entities", "Clinic.Models\Clinic.Entities.csproj", "{DECEF23C-D74E-4AFB-AC93-CE7F6F1F28B0}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Clinic.WebAdmin", "Clinic.WebAdmin\Clinic.WebAdmin.csproj", "{B2F349CB-B317-434D-955D-46E8F35B7B17}"
 EndProject

@@ -97,7 +97,7 @@
                             </button>
                             <div class="collapse navbar-collapse" id="header15">
                                 <!-- Top menu -->
-                                @await Html.PartialAsync("Partial/TopMenu",(IEnumerable<Clinic.Models.Page>)ViewBag.ModelMenu)
+                                @await Html.PartialAsync("Partial/TopMenu",(IEnumerable<Clinic.Entities.Models.Page>)ViewBag.ModelMenu)
                                 <!-- Book an Appointment -->
                                 <ul class="navbar-nav ms-auto">
                                     <li class="nav-item search">
@@ -204,7 +204,7 @@
         <!-- ============================================================== -->
         <!-- Footer -->
         <!-- ============================================================== -->
-        @await Html.PartialAsync("Partial/Footer",(IEnumerable<Clinic.Models.Parameter>)ViewBag.ModelParameter)
+        @await Html.PartialAsync("Partial/Footer",(IEnumerable<Clinic.Entities.Models.Parameter>)ViewBag.ModelParameter)
     </div>
 
     <!-- ============================================================== -->

@@ -2,7 +2,7 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace Clinic.Models
+namespace Clinic.Entities.Models
 {
     public class Parameter : InheritedFields
     {
@@ -13,16 +13,16 @@ namespace Clinic.Models
         [Column(Order = 1)]
         [Required]
         [MaxLength(20, ErrorMessage = "The field should contain max. 20 characters")]
-        public string Code { get; set; } = String.Empty;
+        public string Code { get; set; } = string.Empty;
 
         [Column(Order = 2)]
         [Required]
         [MaxLength(30, ErrorMessage = "The field should contain max. 30 characters")]
-        public string Name { get; set; } = String.Empty;
+        public string Name { get; set; } = string.Empty;
 
         [Column(Order = 3)]
         [Required]
         [MaxLength(200, ErrorMessage = "The field should contain max. 200 characters")]
-        public string Content { get; set; } = String.Empty;
+        public string Content { get; set; } = string.Empty;
     }
 }

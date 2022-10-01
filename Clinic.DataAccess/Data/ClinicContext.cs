@@ -1,4 +1,4 @@
-﻿using Clinic.Models;
+﻿using Clinic.Entities.Models;
 using Clinic.Models.Configuration;
 using Microsoft.EntityFrameworkCore;
 

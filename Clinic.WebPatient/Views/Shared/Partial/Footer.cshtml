@@ -1,4 +1,4 @@
-﻿@model IEnumerable<Clinic.Models.Parameter>
+﻿@model IEnumerable<Clinic.Entities.Models.Parameter>
 
 <div class="footer2 fs-3 bg-dark">
     <div class="f2-middle">
@@ -19,7 +19,7 @@
                 </div>
                 <!-- Column -->
                 <!-- Bottom menu -->
-                @await Html.PartialAsync("Partial/BottomMenu",(IEnumerable<Clinic.Models.Page>)ViewBag.ModelMenu)
+                @await Html.PartialAsync("Partial/BottomMenu",(IEnumerable<Clinic.Entities.Models.Page>)ViewBag.ModelMenu)
                 <!-- Column -->
                 <!-- Column -->
                 <div class="col-lg-3 col-md-6 info-box">
