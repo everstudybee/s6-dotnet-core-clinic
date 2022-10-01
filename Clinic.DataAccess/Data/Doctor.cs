@@ -1,4 +1,4 @@
-﻿using Clinic.Database.Data.Inherited;
+﻿using Clinic.DataAccess.Data.Inherited;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 

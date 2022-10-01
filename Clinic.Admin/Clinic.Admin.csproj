@@ -14,7 +14,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Clinic.Database\Clinic.Database.csproj" />
+    <ProjectReference Include="..\Clinic.DataAccess\Clinic.DataAccess.csproj" />
   </ItemGroup>
 
 </Project>

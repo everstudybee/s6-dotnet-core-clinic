@@ -1,6 +1,7 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Clinic.Database.Data;
+using Microsoft.EntityFrameworkCore;
 
-namespace Clinic.Database.Data
+namespace Clinic.DataAccess.Data
 {
     public class ClinicContext : DbContext
     {
@@ -44,21 +45,21 @@ namespace Clinic.Database.Data
                 {
                     PageId = 1,
                     PageLink = "/Home",
-                    PageAnchorText = "Home Page",
+                    PageAnchorText = "Home",
                     PageLinkPosition = 1,
                     WhenAdded = DateTime.Now
                 }, new
                 {
                     PageId = 2,
-                    PageLink = "/Services",
-                    PageAnchorText = "Services",
+                    PageLink = "/Doctors",
+                    PageAnchorText = "Doctors",
                     PageLinkPosition = 2,
                     WhenAdded = DateTime.Now
                 }, new
                 {
                     PageId = 3,
-                    PageLink = "/Doctors",
-                    PageAnchorText = "Doctors",
+                    PageLink = "/Services",
+                    PageAnchorText = "Services",
                     PageLinkPosition = 3,
                     WhenAdded = DateTime.Now
                 }, new

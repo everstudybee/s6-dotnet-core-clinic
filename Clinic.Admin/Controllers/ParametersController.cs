@@ -1,4 +1,5 @@
-﻿using Clinic.Database.Data;
+﻿using Clinic.DataAccess.Data;
+using Clinic.Database.Data;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 

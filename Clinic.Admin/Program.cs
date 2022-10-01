@@ -1,4 +1,4 @@
-using Clinic.Database.Data;
+using Clinic.DataAccess.Data;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
