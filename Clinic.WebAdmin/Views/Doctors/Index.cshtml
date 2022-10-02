@@ -1,15 +1,17 @@
 ﻿@model IEnumerable<Clinic.Entities.Models.Doctor>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Doctors";
+    ViewData["BreadcrumbAnchor"] = "Doctors";
+    ViewData["BreadcrumbLink"] = "/Doctors";
 }
 
-<h1>Index</h1>
+<h1>@ViewData["Title"]</h1>
 
 <p>
-    <a asp-action="Create">Create New</a>
+    <a asp-action="Create" class="btn btn-primary">Create New</a>
 </p>
-<table class="table">
+<table class="table table-admin">
     <thead>
         <tr>
             <th>
@@ -47,24 +49,6 @@
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.IsHomePage)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.WhoAdded)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.WhenAdded)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.WhoModified)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.WhenModified)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.WhoRemoved)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.WhenRemoved)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.IsActive)
@@ -112,31 +96,12 @@
                 @Html.DisplayFor(modelItem => item.IsHomePage)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.WhoAdded)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.WhenAdded)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.WhoModified)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.WhenModified)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.WhoRemoved)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.WhenRemoved)
-            </td>
-            <td>
                 @Html.DisplayFor(modelItem => item.IsActive)
             </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.DoctorId">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.DoctorId">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.DoctorId">Delete</a>
-            </td>
+                <td class="table-actions">
+                    <a asp-action="Edit" asp-route-id="@item.DoctorId"><img src="~/img/pencil-square.svg" alt="Edit" width="16" height="16"></a> |
+                    <a asp-action="Delete" asp-route-id="@item.DoctorId"><img src="~/img/x-square.svg" alt="Delete" width="16" height="16"></a>
+                </td>
         </tr>
 }
     </tbody>

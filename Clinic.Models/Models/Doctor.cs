@@ -64,6 +64,6 @@ public class Doctor : InheritedFields
     public int Position { get; set; }
 
     [Column(Order = 12)]
-    [Display(Name = "Is Active")]
+    [Display(Name = "Is Home Page")]
     public bool? IsHomePage { get; set; }
 }
