@@ -19,7 +19,7 @@ public class PageConfiguration : IEntityTypeConfiguration<Page>
             new
             {
                 PageId = 1,
-                PageLink = "/Home",
+                PageLink = "/",
                 PageAnchorText = "Home",
                 PageLinkPosition = 1,
                 WhenAdded = DateTime.Now
@@ -40,8 +40,8 @@ public class PageConfiguration : IEntityTypeConfiguration<Page>
             }, new
             {
                 PageId = 4,
-                PageLink = "/Appointments",
-                PageAnchorText = "Appointments",
+                PageLink = "/Departments",
+                PageAnchorText = "Departments",
                 PageLinkPosition = 4,
                 WhenAdded = DateTime.Now
             });

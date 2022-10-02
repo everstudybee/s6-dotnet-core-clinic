@@ -3,7 +3,6 @@ using Clinic.Entities.Models;
 using Microsoft.EntityFrameworkCore;
 
 namespace Clinic.DataAccess.Data;
-
 public class ClinicContext : DbContext
 {
     public ClinicContext(DbContextOptions<ClinicContext> options)

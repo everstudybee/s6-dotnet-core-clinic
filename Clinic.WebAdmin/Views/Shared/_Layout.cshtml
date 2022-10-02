@@ -13,6 +13,9 @@
     <link href="~/lib/matrix-template/libs/flot/css/float-chart.css" rel="stylesheet">
     <!-- Custom CSS -->
     <link href="~/lib/matrix-template/css/style.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/TestProject.styles.css" asp-append-version="true" />
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -37,12 +40,12 @@
         <!-- Left Sidebar - style you can find in sidebar.scss  -->
         <!-- ============================================================== -->
         @await Html.PartialAsync("Partial/LeftSidebar")
-        
+
         <!-- ============================================================== -->
         <!-- Page wrapper  -->
         <!-- ============================================================== -->
         <div class="page-wrapper">
-            
+
             <!-- ============================================================== -->
             <!-- Bread crumb and right sidebar toggle -->
             <!-- ============================================================== -->
@@ -72,97 +75,58 @@
                 <!-- ============================================================== -->
                 <div class="row">
                     <!-- Column -->
-                    <div class="col-md-6 col-lg-2 col-xlg-3">
+                    <a href="/" class="col-md-6 col-lg-2 col-xlg-3">
                         <div class="card card-hover">
                             <div class="box bg-cyan text-center">
-                                <h1 class="font-light text-white"><i class="mdi mdi-view-dashboard"></i></h1>
-                                <h6 class="text-white">Dashboard</h6>
+                                <h1 class="font-light text-white"><i class="mdi mdi-home"></i></h1>
+                                <h6 class="text-white">Home</h6>
                             </div>
                         </div>
-                    </div>
+                    </a>
                     <!-- Column -->
-                    <div class="col-md-6 col-lg-4 col-xlg-3">
+                    <a href="/Parameters" class="col-md-6 col-lg-2 col-xlg-3">
                         <div class="card card-hover">
                             <div class="box bg-success text-center">
-                                <h1 class="font-light text-white"><i class="mdi mdi-chart-areaspline"></i></h1>
-                                <h6 class="text-white">Charts</h6>
+                                <h1 class="font-light text-white"><i class="mdi mdi-server"></i></h1>
+                                <h6 class="text-white">Parameters</h6>
                             </div>
                         </div>
-                    </div>
+                    </a>
                     <!-- Column -->
-                    <div class="col-md-6 col-lg-2 col-xlg-3">
+                    <a href="/Pages" class="col-md-6 col-lg-2 col-xlg-3">
                         <div class="card card-hover">
                             <div class="box bg-warning text-center">
-                                <h1 class="font-light text-white"><i class="mdi mdi-collage"></i></h1>
-                                <h6 class="text-white">Widgets</h6>
+                                <h1 class="font-light text-white"><i class="mdi mdi-book-multiple"></i></h1>
+                                <h6 class="text-white">Pages</h6>
                             </div>
                         </div>
-                    </div>
+                    </a>
                     <!-- Column -->
-                    <div class="col-md-6 col-lg-2 col-xlg-3">
+                    <a href="/Doktors" class="col-md-6 col-lg-2 col-xlg-3">
                         <div class="card card-hover">
                             <div class="box bg-danger text-center">
-                                <h1 class="font-light text-white"><i class="mdi mdi-border-outside"></i></h1>
-                                <h6 class="text-white">Tables</h6>
+                                <h1 class="font-light text-white"><i class="mdi mdi-account-box"></i></h1>
+                                <h6 class="text-white">Doctors</h6>
                             </div>
                         </div>
-                    </div>
+                    </a>
                     <!-- Column -->
-                    <div class="col-md-6 col-lg-2 col-xlg-3">
+                    <a href="/" class="col-md-6 col-lg-2 col-xlg-3">
                         <div class="card card-hover">
                             <div class="box bg-info text-center">
-                                <h1 class="font-light text-white"><i class="mdi mdi-arrow-all"></i></h1>
-                                <h6 class="text-white">Full Width</h6>
+                                <h1 class="font-light text-white"><i class="mdi mdi-checkbox-multiple-marked"></i></h1>
+                                <h6 class="text-white">Services</h6>
                             </div>
                         </div>
-                    </div>
-                    <!-- Column -->
-                    <!-- Column -->
-                    <div class="col-md-6 col-lg-4 col-xlg-3">
+                    </a>
+                    <a href="/" class="col-md-6 col-lg-2 col-xlg-3">
                         <div class="card card-hover">
-                            <div class="box bg-danger text-center">
-                                <h1 class="font-light text-white"><i class="mdi mdi-receipt"></i></h1>
-                                <h6 class="text-white">Forms</h6>
+                            <div class="box bg-card text-center">
+                                <h1 class="font-light text-white"><i class="mdi mdi-calendar-multiple-check"></i></h1>
+                                <h6 class="text-white">Departments</h6>
                             </div>
                         </div>
-                    </div>
-                    <!-- Column -->
-                    <div class="col-md-6 col-lg-2 col-xlg-3">
-                        <div class="card card-hover">
-                            <div class="box bg-info text-center">
-                                <h1 class="font-light text-white"><i class="mdi mdi-relative-scale"></i></h1>
-                                <h6 class="text-white">Buttons</h6>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Column -->
-                    <div class="col-md-6 col-lg-2 col-xlg-3">
-                        <div class="card card-hover">
-                            <div class="box bg-cyan text-center">
-                                <h1 class="font-light text-white"><i class="mdi mdi-pencil"></i></h1>
-                                <h6 class="text-white">Elements</h6>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Column -->
-                    <div class="col-md-6 col-lg-2 col-xlg-3">
-                        <div class="card card-hover">
-                            <div class="box bg-success text-center">
-                                <h1 class="font-light text-white"><i class="mdi mdi-calendar-check"></i></h1>
-                                <h6 class="text-white">Calnedar</h6>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Column -->
-                    <div class="col-md-6 col-lg-2 col-xlg-3">
-                        <div class="card card-hover">
-                            <div class="box bg-warning text-center">
-                                <h1 class="font-light text-white"><i class="mdi mdi-alert"></i></h1>
-                                <h6 class="text-white">Errors</h6>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Column -->
+                    </a>
                 </div>
 
                 @RenderBody()
