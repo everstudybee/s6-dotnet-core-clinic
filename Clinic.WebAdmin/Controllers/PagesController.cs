@@ -20,24 +20,6 @@ public class PagesController : Controller
         return View(await _context.Page.ToListAsync());
     }
 
-    // GET: Pages/Details/5
-    public async Task<IActionResult> Details(int? id)
-    {
-        if(id == null || _context.Page == null)
-        {
-            return NotFound();
-        }
-
-        var page = await _context.Page
-            .FirstOrDefaultAsync(m => m.PageId == id);
-        if(page == null)
-        {
-            return NotFound();
-        }
-
-        return View(page);
-    }
-
     // GET: Pages/Create
     public IActionResult Create()
     {
