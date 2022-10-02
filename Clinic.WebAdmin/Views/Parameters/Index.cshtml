@@ -1,15 +1,17 @@
 ﻿@model IEnumerable<Clinic.Entities.Models.Parameter>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Parameters";
+    ViewData["BreadcrumbAnchor"] = "Parameters";
+    ViewData["BreadcrumbLink"] = "/Parameters";
 }
 
-<h1>Index</h1>
+<h1>@ViewData["Title"]</h1>
 
 <p>
     <a asp-action="Create" class="btn btn-primary">Create New</a>
 </p>
-<table class="table table-striped table-primary table-hover table-bordered">
+<table class="table table-admin">
     <thead>
         <tr>
             <th>
@@ -56,9 +58,8 @@
                     @Html.DisplayFor(modelItem => item.IsActive)
                 </td>
                 <td class="table-actions">
-                    <a asp-action="Edit" asp-route-id="@item.ParameterId"><img src="~/img/pencil-square.svg" alt="Edit" width="24" height="24"></a> |
-                    <a asp-action="Details" asp-route-id="@item.ParameterId"><img src="~/img/info-square.svg" alt="Details" width="24" height="24"></a> |
-                    <a asp-action="Delete" asp-route-id="@item.ParameterId"><img src="~/img/x-square.svg" alt="Delete" width="24" height="24"></a>
+                    <a asp-action="Edit" asp-route-id="@item.ParameterId"><img src="~/img/pencil-square.svg" alt="Edit" width="16" height="16"></a> |
+                    <a asp-action="Delete" asp-route-id="@item.ParameterId"><img src="~/img/x-square.svg" alt="Delete" width="16" height="16"></a>
                 </td>
             </tr>
         }

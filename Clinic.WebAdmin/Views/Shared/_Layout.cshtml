@@ -56,8 +56,8 @@
                         <div class="ms-auto text-end">
                             <nav aria-label="breadcrumb">
                                 <ol class="breadcrumb">
-                                    <li class="breadcrumb-item"><a href="#">Home</a></li>
-                                    <li class="breadcrumb-item active" aria-current="page">@ViewData["Breadcrumb"]</li>
+                                    <li class="breadcrumb-item"><a href="/">Home</a></li>
+                                    <li class="breadcrumb-item active" aria-current="page"><a href="@ViewData["BreadcrumbLink"]">@ViewData["BreadcrumbAnchor"]</a></li>
                                 </ol>
                             </nav>
                         </div>
@@ -73,7 +73,7 @@
                 <!-- ============================================================== -->
                 <!-- Sales Cards  -->
                 <!-- ============================================================== -->
-                <div class="row">
+                <div class="row dashboard-margin">
                     <!-- Column -->
                     <a href="/" class="col-md-6 col-lg-2 col-xlg-3">
                         <div class="card card-hover">
@@ -161,6 +161,7 @@
     <script src="~/lib/matrix-template/libs/flot.tooltip/js/jquery.flot.tooltip.min.js"></script>
     <script src="~/lib/matrix-template/js/pages/chart/chart-page-init.js"></script>
 
+    @await RenderSectionAsync("Scripts", required: false)
 </body>
 
 </html>

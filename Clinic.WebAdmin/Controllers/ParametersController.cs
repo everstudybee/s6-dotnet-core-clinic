@@ -20,24 +20,6 @@ public class ParametersController : Controller
         return View(await _context.Parameter.ToListAsync());
     }
 
-    // GET: Parameters/Details/5
-    public async Task<IActionResult> Details(int? id)
-    {
-        if(id == null || _context.Parameter == null)
-        {
-            return NotFound();
-        }
-
-        var parameter = await _context.Parameter
-            .FirstOrDefaultAsync(m => m.ParameterId == id);
-        if(parameter == null)
-        {
-            return NotFound();
-        }
-
-        return View(parameter);
-    }
-
     // GET: Parameters/Create
     public IActionResult Create()
     {
