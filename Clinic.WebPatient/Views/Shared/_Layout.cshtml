@@ -49,35 +49,7 @@
                                     aria-label="Toggle navigation">
                                 <span class="sl-icon-options-vertical"></span>
                             </button>
-                            <!-- Address and phone section -->
-                            <div class="collapse navbar-collapse" id="h15-info">
-                                <ul class="navbar-nav ms-auto">
-                                    <li class="nav-item">
-                                        <a class="nav-link">
-                                            <div class="display-6 m-r-10">
-                                                <i class="icon-Location-2"></i>
-                                            </div>
-                                            <div>
-                                                <small>
-                                                    121 King Street, Melbourne <br />Victoria 3000
-                                                    Australia
-                                                </small>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link">
-                                            <div class="display-6 m-r-10">
-                                                <i class="icon-Phone-2"></i>
-                                            </div>
-                                            <div>
-                                                <small>GET APPOINTMENT</small>
-                                                <h5 class="fw-bold">703 (123) 4567</h5>
-                                            </div>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
+                            @await Html.PartialAsync("Partial/ContactHeader",(IEnumerable<Clinic.Entities.Models.Parameter>)ViewBag.ModelParameter)
                         </nav>
                     </div>
                 </div>

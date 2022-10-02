@@ -25,7 +25,7 @@ public class HomeController : Controller
         ViewBag.ModelDoctor =
             (
                 from doctor in _context.Doctor
-                where doctor.IsActive == true
+                where doctor.IsActive == true && doctor.IsHomePage == true
                 orderby doctor.Position
                 select doctor
             ).ToList();

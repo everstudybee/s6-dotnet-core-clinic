@@ -1,5 +1,6 @@
 ﻿using Clinic.DataAccess.Data;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace Clinic.WebPatient.Controllers;
 
@@ -45,5 +46,25 @@ public class DoctorsController : Controller
         var pageId = _context.Doctor?.Find(id);
 
         return View(pageId);
+    }
+    public async Task<IActionResult> Details(int? id)
+    {
+
+        ViewBag.ModelMenu =
+               (
+                   from page in _context.Page
+                   where page.IsActive == true
+                   orderby page.PageLinkPosition
+                   select page
+               ).ToList();
+
+        ViewBag.ModelParameter =
+            (
+                from parameter in _context.Parameter
+                where parameter.IsActive == true
+                select parameter
+            ).ToList();
+
+        return View(await _context.Doctor!.Where(d => d.DoctorId == id).FirstOrDefaultAsync());
     }
 }

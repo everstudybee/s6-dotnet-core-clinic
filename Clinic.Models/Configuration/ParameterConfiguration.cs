@@ -51,6 +51,13 @@ public class ParameterConfiguration : IEntityTypeConfiguration<Parameter>
                 Name = "Email",
                 Content = "info@Medika.com",
                 WhenAdded = DateTime.Now
+            }, new
+            {
+                ParameterId = 6,
+                Code = "addressHeader",
+                Name = "Adress header",
+                Content = "121 King Street, Melbourne<br>Victoria 3000 Australia",
+                WhenAdded = DateTime.Now
             });
     }
 }

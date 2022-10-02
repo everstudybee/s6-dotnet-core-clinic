@@ -1,0 +1,224 @@
+﻿@model Clinic.Entities.Models.Doctor
+
+@{
+    ViewData["Title"] = "Doctor Details";
+}
+
+<div class="spacer pborder-0">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-6 col-md-12 text-center">
+                <img src="~/img/doctors/@Model.Image"
+                     class="mb-2 img-fluid border rounded shadow-sm" />
+            </div>
+            <div class="col-lg-6 col-md-12 mt-4 mt-md-0">
+                <div class="d-md-flex align-items-center pb-4 border-bottom">
+                    <div>
+                        <h2 class="font-weight-bold">@Model.Name</h2>
+                        <span class="text-info fw-medium">@Model.Specialty</span>
+                    </div>
+                    <div class="ms-auto">
+                        <a href="#" class="text-muted px-2">
+                            <i class="fa fa-facebook"></i>
+                        </a>
+                        <a href="#" class="text-muted px-2">
+                            <i class="fa fa-twitter"></i>
+                        </a>
+                        <a href="#" class="text-muted px-2">
+                            <i class="fa fa-linkedin"></i>
+                        </a>
+                        <a href="#" class="text-muted px-2">
+                            <i class="fa fa-pinterest"></i>
+                        </a>
+                        <a href="#" class="text-muted px-2">
+                            <i class="fa fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-body pl-0 pborder-0 pb-md-3">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <h4>Personal Details</h4>
+                                <ul class="list-group list-group-flush pb-3">
+                                    <li class="list-group-item px-0 border-0">
+                                        <div class="d-flex no-block align-items-center">
+                                            <span class="text-dark fw-medium">Name :</span>
+                                            <div class="ms-auto">
+                                                <span class="fs-3 fw-normal">@Model.Name</span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item px-0 border-0">
+                                        <div class="d-flex no-block align-items-center">
+                                            <span class="text-dark fw-medium">Specialty In :</span>
+                                            <div class="ms-auto">
+                                                <span class="fs-3 fw-normal">@Model.Specialty</span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item px-0 border-0 pborder-0">
+                                        <div class="d-flex no-block align-items-center">
+                                            <span class="text-dark fw-medium">Experience :</span>
+                                            <div class="ms-auto">
+                                                <span class="fs-3 fw-normal">@Model.Experience</span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-md-12">
+                                <h4 class="border-top pt-3">Degree and Training</h4>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item px-0 border-0">
+                                        <div class="d-md-flex align-items-center">
+                                            <span class="text-dark fw-medium">Medical Education :</span>
+                                            <div class="ms-auto">
+                                                <span class="fs-3 fw-normal">@Model.Education</span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item px-0 border-0">
+                                        <div class="d-md-flex align-items-center">
+                                            <span class="text-dark fw-medium">Practise Area :</span>
+                                            <div class="ms-auto">
+                                                <span class="fs-3 fw-normal">@Model.Area</span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item px-0 border-0">
+                                        <div class="d-md-flex align-items-center">
+                                            <span class="text-dark fw-medium">Certifications :</span>
+                                            <div class="ms-auto">
+                                                <span class="fs-3 fw-normal">@Model.Certifications</span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+       
+        <div class="container mt-5">
+            <div class="row">
+                <div class="col-lg-8">
+                    <h2 class="font-weight-bold">Biography</h2>
+                    @Html.Raw(Model.Biography)
+                </div>
+                <div class="col-lg-4">
+                    <div class="card bg-light">
+                        <div class="card-body">
+                            <h4 class="
+                            fw-medium
+                            m-border-0
+                            d-flex
+                            no-block
+                            align-items-center
+                            justify-content-center
+                            border-bottom
+                            pb-3
+                          ">
+                                <i class="display-6 me-2 text-info icon-Stopwatch me-2"></i>Available Time
+                            </h4>
+                            <ul class="list-group list-group-flush mt-2">
+                                <li class="list-group-item px-0 py-2 border-0 bg-light">
+                                    <div class="d-flex no-block align-items-center">
+                                        <span class="text-dark fw-normal">Monday</span>
+                                        <div class="ms-auto">
+                                            <span class="fs-3 fw-normal">9.00 AM to 7.00 PM</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="list-group-item px-0 py-2 border-0 bg-light">
+                                    <div class="d-flex no-block align-items-center">
+                                        <span class="text-dark fw-normal">Tuesday</span>
+                                        <div class="ms-auto">
+                                            <span class="fs-3 fw-normal">9.00 AM to 7.00 PM</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="list-group-item px-0 py-2 border-0 bg-light">
+                                    <div class="d-flex no-block align-items-center">
+                                        <span class="text-dark fw-normal">Wednesday</span>
+                                        <div class="ms-auto">
+                                            <span class="fs-3 fw-normal">9.00 AM to 7.00 PM</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="list-group-item px-0 py-2 border-0 bg-light">
+                                    <div class="d-flex no-block align-items-center">
+                                        <span class="text-dark fw-normal">Thursday</span>
+                                        <div class="ms-auto">
+                                            <span class="fs-3 fw-normal">9.00 AM to 7.00 PM</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="list-group-item px-0 py-2 border-0 bg-light">
+                                    <div class="d-flex no-block align-items-center">
+                                        <span class="text-dark fw-normal">Friday</span>
+                                        <div class="ms-auto">
+                                            <span class="fs-3 fw-normal">9.00 AM to 7.00 PM</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="list-group-item px-0 py-2 border-0 bg-light">
+                                    <div class="d-flex no-block align-items-center">
+                                        <span class="text-dark fw-normal">Saturday</span>
+                                        <div class="ms-auto">
+                                            <span class="fs-3 fw-normal">10.00 AM to 7.00 PM</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="list-group-item px-0 py-2 border-0 bg-light">
+                                    <div class="d-flex no-block align-items-center">
+                                        <span class="text-dark fw-normal">Sunday</span>
+                                        <div class="ms-auto">
+                                            <span class="fs-3 fw-medium text-danger">Closed</span>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@*<div class="container">
+    <h2>Szczegoly</h2>
+
+    <div>
+        @Model.Foto
+    </div>
+    <div>
+        @Model.Nazwa
+    </div>
+    <div>
+        @Model.Opis
+    </div>
+    <div>
+        Cena: @Model.Cena.ToString("0.00")
+    </div>
+    <div>
+        <a asp-action="DodajDoKoszyka" asp-controller="Koszyk" asp-route-id="@Model.IdTowaru">Dodaj do koszyka</a>
+    </div>
+</div>*@

@@ -1,0 +1,30 @@
+﻿@model IEnumerable<Clinic.Entities.Models.Parameter>
+
+<!-- Address and phone section -->
+<div class="collapse navbar-collapse" id="h15-info">
+    <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+            <a class="nav-link">
+                <div class="display-6 m-r-10">
+                    <i class="icon-Location-2"></i>
+                </div>
+                <div>
+                    <small>
+                        @Html.Raw(Model.Where(p => p.Code == "addressHeader").FirstOrDefault()!.Content)
+                    </small>
+                </div>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link">
+                <div class="display-6 m-r-10">
+                    <i class="icon-Phone-2"></i>
+                </div>
+                <div>
+                    <small>GET APPOINTMENT</small>
+                    <h5 class="fw-bold">@Model.Where(p => p.Code == "phone").FirstOrDefault()!.Content</h5>
+                </div>
+            </a>
+        </li>
+    </ul>
+</div>
