@@ -1,0 +1,143 @@
+﻿@model IEnumerable<Clinic.Entities.Models.Doctor>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ImageSmall)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Image)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Specialty)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Experience)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Education)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Area)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Certifications)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ShortPresentation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Biography)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Position)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IsHomePage)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.WhoAdded)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.WhenAdded)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.WhoModified)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.WhenModified)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.WhoRemoved)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.WhenRemoved)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IsActive)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ImageSmall)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Image)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Specialty)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Experience)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Education)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Area)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Certifications)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ShortPresentation)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Biography)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Position)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IsHomePage)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.WhoAdded)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.WhenAdded)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.WhoModified)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.WhenModified)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.WhoRemoved)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.WhenRemoved)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IsActive)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.DoctorId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.DoctorId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.DoctorId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

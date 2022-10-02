@@ -57,7 +57,7 @@
                             <nav aria-label="breadcrumb">
                                 <ol class="breadcrumb">
                                     <li class="breadcrumb-item"><a href="#">Home</a></li>
-                                    <li class="breadcrumb-item active" aria-current="page">Library</li>
+                                    <li class="breadcrumb-item active" aria-current="page">@ViewData["Breadcrumb"]</li>
                                 </ol>
                             </nav>
                         </div>
@@ -102,7 +102,7 @@
                         </div>
                     </a>
                     <!-- Column -->
-                    <a href="/Doktors" class="col-md-6 col-lg-2 col-xlg-3">
+                    <a href="/Doctors" class="col-md-6 col-lg-2 col-xlg-3">
                         <div class="card card-hover">
                             <div class="box bg-danger text-center">
                                 <h1 class="font-light text-white"><i class="mdi mdi-account-box"></i></h1>
@@ -111,7 +111,7 @@
                         </div>
                     </a>
                     <!-- Column -->
-                    <a href="/" class="col-md-6 col-lg-2 col-xlg-3">
+                    <a href="/Services" class="col-md-6 col-lg-2 col-xlg-3">
                         <div class="card card-hover">
                             <div class="box bg-info text-center">
                                 <h1 class="font-light text-white"><i class="mdi mdi-checkbox-multiple-marked"></i></h1>
@@ -119,7 +119,7 @@
                             </div>
                         </div>
                     </a>
-                    <a href="/" class="col-md-6 col-lg-2 col-xlg-3">
+                    <a href="/Departments" class="col-md-6 col-lg-2 col-xlg-3">
                         <div class="card card-hover">
                             <div class="box bg-card text-center">
                                 <h1 class="font-light text-white"><i class="mdi mdi-calendar-multiple-check"></i></h1>
@@ -130,9 +130,8 @@
                 </div>
 
                 @RenderBody()
-
-                @await Html.PartialAsync("Partial/Footer")
             </div>
+            @await Html.PartialAsync("Partial/Footer")
         </div>
     </div>
 

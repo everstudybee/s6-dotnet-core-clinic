@@ -33,3 +33,11 @@ body {
 .bg-card {
     background-color: #7266C3;
 }
+
+.dashboard-center{
+    justify-content: center;
+}
+
+.font-32 {
+    font-size: 32px;
+}

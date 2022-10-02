@@ -4,9 +4,9 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace Clinic.Entities.Configuration;
 
-public class DoctorConfiguration : IEntityTypeConfiguration<Doctor>
+public class ServiceConfiguration : IEntityTypeConfiguration<Service>
 {
-    public void Configure(EntityTypeBuilder<Doctor> builder)
+    public void Configure(EntityTypeBuilder<Service> builder)
     {
         builder.Property(b => b.WhoAdded)
             .HasDefaultValue("Admin");
@@ -18,7 +18,7 @@ public class DoctorConfiguration : IEntityTypeConfiguration<Doctor>
         builder.HasData(
             new
             {
-                DoctorId = 1,
+                ServiceId = 1,
                 Name = "Dr. Micheal Anderson",
                 ImageSmall = "t1.jpg",
                 Image = "detail-dr1.jpg",
@@ -35,7 +35,7 @@ public class DoctorConfiguration : IEntityTypeConfiguration<Doctor>
             },
             new
             {
-                DoctorId = 2,
+                ServiceId = 2,
                 Name = "Dr. Micheal Anderson",
                 ImageSmall = "t2.jpg",
                 Image = "detail-dr1.jpg",
@@ -46,13 +46,13 @@ public class DoctorConfiguration : IEntityTypeConfiguration<Doctor>
                 Certifications = "USA Board Neurological Surgery",
                 ShortPresentation = "Short presentation",
                 Biography = "<p>Biography</p>",
-                Position = 2,
+                Position = 1,
                 IsHomePage = true,
                 WhenAdded = DateTime.Now
             },
             new
             {
-                DoctorId = 3,
+                ServiceId = 3,
                 Name = "Dr. Micheal Anderson",
                 ImageSmall = "t3.jpg",
                 Image = "detail-dr1.jpg",
@@ -63,13 +63,13 @@ public class DoctorConfiguration : IEntityTypeConfiguration<Doctor>
                 Certifications = "USA Board Neurological Surgery",
                 ShortPresentation = "Short presentation",
                 Biography = "<p>Biography</p>",
-                Position = 3,
+                Position = 1,
                 IsHomePage = true,
                 WhenAdded = DateTime.Now
             },
             new
             {
-                DoctorId = 4,
+                ServiceId = 4,
                 Name = "Dr. Micheal Anderson",
                 ImageSmall = "t4.jpg",
                 Image = "detail-dr1.jpg",
@@ -80,7 +80,7 @@ public class DoctorConfiguration : IEntityTypeConfiguration<Doctor>
                 Certifications = "USA Board Neurological Surgery",
                 ShortPresentation = "Short presentation",
                 Biography = "<p>Biography</p>",
-                Position = 4,
+                Position = 1,
                 IsHomePage = true,
                 WhenAdded = DateTime.Now
             });
