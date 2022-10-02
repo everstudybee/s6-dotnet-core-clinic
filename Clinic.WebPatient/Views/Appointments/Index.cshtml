@@ -1,0 +1,70 @@
+﻿@model IEnumerable<Clinic.Entities.Models.Appointment>
+
+@{
+    ViewData["Title"] = "Appointments";
+}
+
+<div class="container-fluid">
+    <div class="spacer">
+        <!-- General Health Care -->
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-7 col-md-9 text-center">
+                    
+                </div>
+            </div>
+        </div>
+        <div class="container b-b-">
+            <h1>@ViewData["Title"]</h1>
+            <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>
+                            @Html.DisplayNameFor(model => model.Patient)
+                            </th>
+                            <th>
+                            @Html.DisplayNameFor(model => model.Doctor)
+                            </th>
+                            <th>
+                            @Html.DisplayNameFor(model => model.SessionId)
+                            </th>
+                            <th>
+                            @Html.DisplayNameFor(model => model.AppointmentDate)
+                            </th>
+                            <th>
+                            @Html.DisplayNameFor(model => model.CreateDate)
+                            </th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach(var item in Model)
+                        {                          
+                        <tr>
+                                <td>
+                                @Html.DisplayFor(modelItem => item.Patient)
+                                </td>
+                                <td>
+                                @Html.DisplayFor(modelItem => item.Doctor.Name)
+                                </td>
+                                <td>
+                                @Html.DisplayFor(modelItem => item.SessionId)
+                                </td>
+                                <td>
+                                @Html.DisplayFor(modelItem => item.AppointmentDate)
+                                </td>
+                                <td>
+                                @Html.DisplayFor(modelItem => item.CreateDate)
+                                </td>
+                                <td>
+                                    <a asp-action="Edit" asp-route-id="@item.ApointmentId">Edit</a> |
+                                    <a asp-action="Details" asp-route-id="@item.ApointmentId">Details</a> |
+                                    <a asp-action="Delete" asp-route-id="@item.ApointmentId">Delete</a>
+                                </td>   
+                        </tr>
+                        }
+                    </tbody>
+            </table>
+        </div>
+    </div>
+</div

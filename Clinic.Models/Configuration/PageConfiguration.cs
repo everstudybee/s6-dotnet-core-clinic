@@ -44,6 +44,13 @@ public class PageConfiguration : IEntityTypeConfiguration<Page>
                 PageAnchorText = "Departments",
                 PageLinkPosition = 4,
                 WhenAdded = DateTime.Now
+            }, new
+            {
+                PageId = 5,
+                PageLink = "/Appointments",
+                PageAnchorText = "Appointments",
+                PageLinkPosition = 5,
+                WhenAdded = DateTime.Now
             });
     }
 }
