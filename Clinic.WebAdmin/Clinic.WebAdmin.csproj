@@ -19,8 +19,4 @@
     <ProjectReference Include="..\Clinic.Models\Clinic.Entities.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="wwwroot\lib\template\" />
-  </ItemGroup>
-
 </Project>
