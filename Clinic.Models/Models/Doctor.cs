@@ -66,4 +66,6 @@ public class Doctor : InheritedFields
     [Column(Order = 12)]
     [Display(Name = "Is Home Page")]
     public bool? IsHomePage { get; set; }
+
+
 }

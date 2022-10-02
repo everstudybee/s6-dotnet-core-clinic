@@ -26,6 +26,7 @@ public class ClinicContext : DbContext
     public DbSet<Doctor> Doctor { get; set; } = null!;
     public DbSet<Parameter> Parameter { get; set; } = null!;
     public DbSet<Service> Service { get; set; } = null!;
+    public DbSet<Appointment> Appointment { get; set; } = null!;
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -33,5 +34,6 @@ public class ClinicContext : DbContext
         modelBuilder.ApplyConfiguration(new ParameterConfiguration());
         modelBuilder.ApplyConfiguration(new DoctorConfiguration());
         modelBuilder.ApplyConfiguration(new ServiceConfiguration());
+        modelBuilder.ApplyConfiguration(new AppointmentConfiguration());
     }
 }
